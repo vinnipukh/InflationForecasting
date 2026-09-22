@@ -1,0 +1,11 @@
+{
+  "version": 1,
+  "skills": {
+    "timesfm-forecasting": {
+      "source": "k-dense-ai/scientific-agent-skills",
+      "sourceType": "github",
+      "skillPath": "skills/timesfm-forecasting/SKILL.md",
+      "computedHash": "58dec11d7f19e47af17d76fda6cb3cd6ba46d66c3b96f1e8d6f34597c77e2466"
+    }
+  }
+}
