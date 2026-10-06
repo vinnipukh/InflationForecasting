@@ -110,6 +110,12 @@ tr.model td { font-weight: 600; }
 .product-list li[aria-selected="true"] { background: var(--text); color: var(--bg); }
 .product-list li small { display: block; opacity: .7; font-size: .78rem; }
 
+.td-chart { margin-top: 12px; }
+.td-sub { margin-top: 1.5rem; }
+.tile-v { font-size: 1.8rem; font-weight: 700; font-variant-numeric: tabular-nums; line-height: 1.2; }
+.tile-v small { font-size: 1rem; font-weight: 600; color: var(--text-2); }
+#td-table td.hi { font-weight: 700; }
+
 .cols { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 12px; }
 .cols .card h3 { margin-bottom: .4rem; }
 .cols .card p { margin: 0; color: var(--text-2); font-size: .95rem; }

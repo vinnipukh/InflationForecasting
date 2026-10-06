@@ -1,7 +1,8 @@
 """Data for the GitHub Pages site (site/): retrains the LightGBM hurdle model per block with the tuned
 parameters in configs/phase1_best_params.json (no re-tuning) and writes
 
-* site/data/summary.json  — data-target-day metrics (model vs. yesterday's price) and system MAE per block
+* site/data/summary.json  — data-target-day metrics (model vs. yesterday's price) and system MAE per block, and
+  regular-price change counts per day (target days vs. other days)
 * site/data/products.json — per product: regular price as change points, target-day forecasts
 
 Needs data/processed from notebooks 01 and 02.
@@ -35,6 +36,45 @@ def change_points(values: np.ndarray) -> list:
             out.append([i, v])
             prev = v
     return out
+
+
+def change_calendar(feat: pd.DataFrame) -> dict:
+    """How often regular prices really change, by day: the evidence behind forecasting only on target days.
+
+    A change = the hindsight regular price moved by more than TOL from the previous calendar day (both days observed,
+    outage excluded), counted once per product whatever its size. Same definition as the day-of-month rates in the
+    README (9.2 % on the 1st, 0.04 % on the 30th).
+    """
+    f = (feat.loc[feat["observed"] & feat["target_price"].notna(),
+                  ["segment_id", "date", "in_outage", "target_price", "is_target_data", "is_holiday"]]
+         .sort_values(["segment_id", "date"]))
+    g = f.groupby("segment_id")
+    consecutive = (f["date"] - g["date"].shift()).dt.days.eq(1)
+    prev = g["target_price"].shift()
+    f = f.assign(chg=(f["target_price"] / prev - 1).abs() > M.TOL,
+                 err=(f["target_price"] - prev).abs())[consecutive & ~f["in_outage"]]  # persistence error, TRY
+
+    days = f.groupby("date").agg(changes=("chg", "sum"), products=("chg", "size"), err=("err", "sum"),
+                                 target=("is_target_data", "first"), holiday=("is_holiday", "first"))
+    dom = days.index.day
+    days["kind"] = np.where(dom.isin([1, 14, 15, 16]), dom.astype(str), np.where(days["holiday"] == 1, "holiday", "other"))
+    months = []
+    for month, m in days.groupby(days.index.strftime("%Y-%m")):
+        row = {"month": month}
+        for kind in ["1", "14", "15", "16", "holiday"]:
+            row[kind] = int(m.loc[m["kind"] == kind, "changes"].sum()) if (m["kind"] == kind).any() else None
+        row["other"] = int(m.loc[m["kind"] == "other", "changes"].sum())
+        row["other_days"] = int((m["kind"] == "other").sum())
+        months.append(row)
+    by_dom = days.groupby(dom).agg(changes=("changes", "sum"), products=("products", "sum"))
+    totals = days.groupby("target").agg(days=("changes", "size"), changes=("changes", "sum"), err=("err", "sum"))
+    return {
+        "months": months,
+        "by_day_of_month": [{"day": int(d), "changes": int(r.changes), "products": int(r.products)} for d, r in by_dom.iterrows()],
+        **{key: {"days": int(totals.at[flag, "days"]), "changes": int(totals.at[flag, "changes"]),
+                 "persistence_abs_err_try": round(float(totals.at[flag, "err"]), 2)}
+           for key, flag in (("target", True), ("other", False))},
+    }
 
 
 def main() -> None:
@@ -93,7 +133,7 @@ def main() -> None:
         "generated": date.today().isoformat(), "data_end": dates[-1].date().isoformat(), "model": MODEL,
         "outage": json.loads((processed / "gurmar_blocks.json").read_text())["outage"],
         "n_products": len(products), "n_days": int(feat.loc[feat["observed"], "date"].nunique()),
-        "blocks": summary_blocks,
+        "blocks": summary_blocks, "calendar": change_calendar(feat),
     }, ensure_ascii=False, indent=1), encoding="utf-8")
     (OUT / "products.json").write_text(json.dumps(
         {"dates": [d.date().isoformat() for d in dates], "products": products},

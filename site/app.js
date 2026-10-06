@@ -33,6 +33,19 @@ const I18N = {
     no_preds: 'Bu ürün için test bloklarında hedef gün tahmini yok.',
     n_products: (n, total) => `${n.toLocaleString('tr-TR')} / ${total.toLocaleString('tr-TR')} ürün`,
     meta: (p) => `${p.cat} · ${p.id}`,
+    td_h: 'Neden sadece belirli günlerde tahmin?',
+    td_p: 'Model her gün tahmin yapmıyor. Yalnızca ayın 1, 14, 15, 16\'sında ve resmi/dini bayramlarda çalışıyor, diğer günlerde dünün fiyatını kullanıyor. Sebebi, Gürmar\'da fiyatların çoğunlukla bu günlerde değişmesi. Aşağıdaki sayılar, normal fiyatı bir önceki güne göre değişen ürün sayısı. Değişimin tutarı önemli değil: 1 TL\'den 10 TL\'ye çıkan bir ürün de bir değişim sayılır.',
+    td_k_days: 'Hedef günlerin tüm günlere oranı',
+    td_k_changes: 'Fiyat değişimlerinin hedef günlere düşen payı',
+    td_k_avg: 'Günde ortalama fiyat değişimi: hedef günler / diğer günler',
+    td_k_err: 'Dünün fiyatıyla yapılan toplam hatanın (TL) hedef günlere düşen payı',
+    td_chart: 'Ayın gününe göre fiyat değişim oranı (%)',
+    td_target: 'Hedef gün (1, 14, 15, 16)', td_other: 'Diğer günler',
+    td_table_h: 'Ay ay fiyat değişimi sayısı',
+    td_cols: ['Ay', 'Ayın 1\'i', '14\'ü', '15\'i', '16\'sı', 'Bayram/tatil', 'Hedef günler toplam', 'Diğer günler toplam', 'Diğer gün sayısı'],
+    td_total: 'Toplam',
+    td_note: 'Değişim: normal fiyatın (kampanyalar ayıklanmış) bir önceki güne göre %0,5\'ten fazla oynaması; iki günün de gözlenmiş olması gerekir. Haziran–Temmuz ile Mayıs ve Ağustos\'un bir kısmı scraper kesintisinde kalıyor. 1 Mayıs, 30 Nisan\'da veri olmadığı için sayılamadı. "–": o gün veri yok. Grafikte bayramlar "diğer günler" içinde.',
+    td_why: 'Bu neden işe yarıyor? Diğer günlerde fiyat neredeyse hiç değişmiyor. Orada "dünün fiyatı" zaten neredeyse kusursuz; model tahmin yapsa ancak gereksiz değişimler öngörüp hata ekleyebilir. Hedef günlerde değişim olasılığı birkaç kat yüksek, bu yüzden modelin "yarın fiyat değişir" sinyali eşiği geçebiliyor. Tahmini bu günlere sınırlamak modeli en çok işe yaradığı yerde kullanmak demek. Ay sonunu da içeren ilk gün kümesine göre MAE iyileşmesi B2\'de %18,9\'dan %23,7\'ye, B3\'te −%50,8\'den +%7,3\'e çıktı.',
     method_h: 'Nasıl çalışıyor?',
     method: [
       ['Hedef', 'Ertesi günün normal fiyatı. Kampanya indirimleri ayıklanır: bir fiyat düşüşü 21 güne kadar kampanya sayılır, sonra yeni normal fiyat olur.'],
@@ -87,6 +100,19 @@ const I18N = {
     no_preds: 'No target-day forecasts for this product in the test blocks.',
     n_products: (n, total) => `${n.toLocaleString('en-US')} / ${total.toLocaleString('en-US')} products`,
     meta: (p) => `${p.cat} · ${p.id}`,
+    td_h: 'Why forecast only on certain days?',
+    td_p: 'The model does not forecast every day. It runs only on the 1st, 14th, 15th and 16th of the month and on public/religious holidays, and uses yesterday\'s price on every other day. The reason: at Gürmar, prices mostly change on these days. The numbers below count products whose regular price changed from the previous day. The size of the change does not matter: a product going from 1 TRY to 10 TRY counts as one change.',
+    td_k_days: 'Share of all days that are target days',
+    td_k_changes: 'Share of price changes that fall on target days',
+    td_k_avg: 'Average price changes per day: target days / other days',
+    td_k_err: 'Share of the total error (TRY) of yesterday\'s price that falls on target days',
+    td_chart: 'Price-change rate by day of month (%)',
+    td_target: 'Target day (1, 14, 15, 16)', td_other: 'Other days',
+    td_table_h: 'Price changes per month',
+    td_cols: ['Month', '1st', '14th', '15th', '16th', 'Holidays', 'Target days total', 'Other days total', 'Number of other days'],
+    td_total: 'Total',
+    td_note: 'Change: the regular price (sales filtered out) moved by more than 0.5 % from the previous day; both days must be observed. June–July and parts of May and August fall in the scraper outage. May 1 could not be counted because April 30 has no data. "–": no data that day. In the chart, holidays are part of "other days".',
+    td_why: 'Why does this work? On other days prices hardly ever change. There, "yesterday\'s price" is already almost perfect; a model forecasting there could only add error by predicting changes that do not happen. On target days a change is several times more likely, so the model\'s "price changes tomorrow" signal can clear its threshold. Restricting forecasts to these days uses the model where it helps most. Compared with the first day set, which included month end, the MAE gain went from 18.9 % to 23.7 % in B2 and from −50.8 % to +7.3 % in B3.',
     method_h: 'How it works',
     method: [
       ['Target', 'Tomorrow\'s regular price. Sales are filtered out: a price drop counts as a sale for up to 21 days, then becomes the new regular price.'],
@@ -121,7 +147,7 @@ const store = {
 
 let lang = store.get('lang') || ((navigator.language || '').toLowerCase().startsWith('tr') ? 'tr' : 'en');
 let summary = null, products = null, dates = null, selected = null;
-let metricCharts = [], productChart = null;
+let metricCharts = [], productChart = null, domChart = null;
 
 const $ = (s) => document.querySelector(s);
 const t = (k) => I18N[lang][k];
@@ -190,6 +216,61 @@ function renderTiles() {
     return `<div class="card"><h3>${t(label)}</h3><p class="hint">${t(hint)}</p>
       <table><thead><tr><th class="l">${t('col_block')}</th><th>${t('dummy_short')}</th><th>Model</th></tr></thead><tbody>${rows}</tbody></table></div>`;
   }).join('');
+}
+
+// ── target days: how often prices change on the days the model forecasts ───
+
+const share = (x) => (lang === 'tr' ? `%${fmt(100 * x, 0)}` : `${fmt(100 * x, 0)} %`);
+
+function renderTargetDays() {
+  const c = summary.calendar;
+  const all = c.target.changes + c.other.changes;
+  $('#td-tiles').innerHTML = [
+    [share(c.target.days / (c.target.days + c.other.days)), 'td_k_days'],
+    [share(c.target.changes / all), 'td_k_changes'],
+    [`${fmt(c.target.changes / c.target.days, 0)} <small>/ ${fmt(c.other.changes / c.other.days, 0)}</small>`, 'td_k_avg'],
+    [share(c.target.persistence_abs_err_try / (c.target.persistence_abs_err_try + c.other.persistence_abs_err_try)), 'td_k_err'],
+  ].map(([v, k]) => `<div class="card"><div class="tile-v">${v}</div><p class="hint">${t(k)}</p></div>`).join('');
+
+  const kinds = ['1', '14', '15', '16', 'holiday'];
+  const cell = (v, cls = '') => `<td${cls ? ` class="${cls}"` : ''}>${v == null ? '–' : fmt(v, 0)}</td>`;
+  // null when the month has no target day in the data (shown as "–", not 0)
+  const targetSum = (r) => (kinds.some((k) => r[k] != null) ? kinds.reduce((s, k) => s + (r[k] ?? 0), 0) : null);
+  const monthName = (m) => new Date(`${m}-01T00:00:00`).toLocaleDateString(lang === 'tr' ? 'tr-TR' : 'en-US', { month: 'long', year: 'numeric' });
+  const rows = c.months.map((r) => `<tr><td class="l">${monthName(r.month)}</td>${kinds.map((k) => cell(r[k])).join('')}
+    ${cell(targetSum(r), 'hi')}${cell(r.other)}${cell(r.other_days)}</tr>`);
+  const tot = Object.fromEntries([...kinds, 'other', 'other_days'].map((k) => [k, c.months.reduce((s, r) => s + (r[k] ?? 0), 0)]));
+  rows.push(`<tr class="model"><td class="l">${t('td_total')}</td>${kinds.map((k) => cell(tot[k])).join('')}
+    ${cell(targetSum(tot), 'hi')}${cell(tot.other)}${cell(tot.other_days)}</tr>`);
+  $('#td-table').innerHTML = `<thead><tr>${t('td_cols').map((h, i) => `<th${i ? '' : ' class="l"'}>${h}</th>`).join('')}</tr></thead><tbody>${rows.join('')}</tbody>`;
+}
+
+function renderDomChart() {
+  const c = summary.calendar, isTarget = (d) => [1, 14, 15, 16].includes(d);
+  const rate = (d) => 100 * d.changes / d.products;
+  domChart?.destroy();
+  const canvas = $('#chart-dom');
+  canvas.ariaLabel = `${t('td_chart')}: ` + c.by_day_of_month.map((d) => `${d.day}: ${fmt(rate(d), 1)}`).join(', ');
+  domChart = new Chart(canvas, {
+    type: 'bar',
+    data: {
+      labels: c.by_day_of_month.map((d) => d.day),
+      datasets: [
+        { label: t('td_target'), data: c.by_day_of_month.map((d) => (isTarget(d.day) ? rate(d) : null)), backgroundColor: css('--series-1') },
+        { label: t('td_other'), data: c.by_day_of_month.map((d) => (isTarget(d.day) ? null : rate(d))), backgroundColor: css('--neutral') },
+      ].map((ds) => ({ ...ds, grouped: false, borderRadius: 3, borderSkipped: 'bottom' })),
+    },
+    options: {
+      maintainAspectRatio: false,
+      interaction: { mode: 'index', intersect: false },
+      plugins: {
+        title: { display: true, text: t('td_chart'), align: 'start', color: css('--text'), font: { size: 14, weight: '600' } },
+        legend: { position: 'top', align: 'start', labels: { boxWidth: 12, boxHeight: 12 } },
+        tooltip: { filter: (x) => x.parsed.y != null, callbacks: { label: (x) => `${x.dataset.label}: ${fmt(x.parsed.y, 2)} %` } },
+      },
+      scales: { x: { grid: { display: false } }, y: { beginAtZero: true, grid: { color: css('--border') } } },
+    },
+  });
 }
 
 function renderResultsTable() {
@@ -407,6 +488,7 @@ function renderCharts() {
   if (!summary || !window.Chart) return;
   chartDefaults();
   renderMetricCharts();
+  renderDomChart();
   renderProduct();
 }
 
@@ -415,6 +497,7 @@ function renderAll() {
   if (!summary) return;
   renderTiles();
   renderResultsTable();
+  renderTargetDays();
   renderCatFilter();
   renderList();
   $('#generated').textContent = t('generated')(summary.generated, summary.data_end);

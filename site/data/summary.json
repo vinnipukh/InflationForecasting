@@ -90,5 +90,246 @@
  "outage": [
   "2026-05-06",
   "2026-08-17"
- ]
+ ],
+ "calendar": {
+  "months": [
+   {
+    "month": "2026-02",
+    "1": null,
+    "14": null,
+    "15": null,
+    "16": null,
+    "holiday": null,
+    "other": 67,
+    "other_days": 3
+   },
+   {
+    "month": "2026-03",
+    "1": 780,
+    "14": 70,
+    "15": 6,
+    "16": 89,
+    "holiday": 17,
+    "other": 646,
+    "other_days": 21
+   },
+   {
+    "month": "2026-04",
+    "1": 31,
+    "14": 31,
+    "15": 150,
+    "16": 71,
+    "holiday": 26,
+    "other": 925,
+    "other_days": 24
+   },
+   {
+    "month": "2026-05",
+    "1": null,
+    "14": null,
+    "15": null,
+    "16": null,
+    "holiday": null,
+    "other": 124,
+    "other_days": 3
+   },
+   {
+    "month": "2026-08",
+    "1": null,
+    "14": null,
+    "15": null,
+    "16": null,
+    "holiday": 1,
+    "other": 296,
+    "other_days": 13
+   },
+   {
+    "month": "2026-09",
+    "1": 311,
+    "14": 50,
+    "15": 56,
+    "16": 118,
+    "holiday": null,
+    "other": 447,
+    "other_days": 26
+   },
+   {
+    "month": "2026-10",
+    "1": 497,
+    "14": null,
+    "15": null,
+    "16": null,
+    "holiday": null,
+    "other": 60,
+    "other_days": 3
+   }
+  ],
+  "by_day_of_month": [
+   {
+    "day": 1,
+    "changes": 1619,
+    "products": 17342
+   },
+   {
+    "day": 2,
+    "changes": 161,
+    "products": 22116
+   },
+   {
+    "day": 3,
+    "changes": 310,
+    "products": 21137
+   },
+   {
+    "day": 4,
+    "changes": 170,
+    "products": 21183
+   },
+   {
+    "day": 5,
+    "changes": 56,
+    "products": 13281
+   },
+   {
+    "day": 6,
+    "changes": 52,
+    "products": 12401
+   },
+   {
+    "day": 7,
+    "changes": 70,
+    "products": 7366
+   },
+   {
+    "day": 8,
+    "changes": 125,
+    "products": 8206
+   },
+   {
+    "day": 9,
+    "changes": 89,
+    "products": 13216
+   },
+   {
+    "day": 10,
+    "changes": 96,
+    "products": 13178
+   },
+   {
+    "day": 11,
+    "changes": 52,
+    "products": 13538
+   },
+   {
+    "day": 12,
+    "changes": 63,
+    "products": 13535
+   },
+   {
+    "day": 13,
+    "changes": 83,
+    "products": 12804
+   },
+   {
+    "day": 14,
+    "changes": 151,
+    "products": 12782
+   },
+   {
+    "day": 15,
+    "changes": 212,
+    "products": 13673
+   },
+   {
+    "day": 16,
+    "changes": 278,
+    "products": 13709
+   },
+   {
+    "day": 17,
+    "changes": 112,
+    "products": 12731
+   },
+   {
+    "day": 18,
+    "changes": 94,
+    "products": 11628
+   },
+   {
+    "day": 19,
+    "changes": 37,
+    "products": 17097
+   },
+   {
+    "day": 20,
+    "changes": 90,
+    "products": 17976
+   },
+   {
+    "day": 21,
+    "changes": 112,
+    "products": 17895
+   },
+   {
+    "day": 22,
+    "changes": 93,
+    "products": 21798
+   },
+   {
+    "day": 23,
+    "changes": 68,
+    "products": 16008
+   },
+   {
+    "day": 24,
+    "changes": 165,
+    "products": 17038
+   },
+   {
+    "day": 25,
+    "changes": 219,
+    "products": 17884
+   },
+   {
+    "day": 26,
+    "changes": 37,
+    "products": 17999
+   },
+   {
+    "day": 27,
+    "changes": 99,
+    "products": 22875
+   },
+   {
+    "day": 28,
+    "changes": 88,
+    "products": 21861
+   },
+   {
+    "day": 29,
+    "changes": 43,
+    "products": 17063
+   },
+   {
+    "day": 30,
+    "changes": 5,
+    "products": 12971
+   },
+   {
+    "day": 31,
+    "changes": 20,
+    "products": 9050
+   }
+  ],
+  "target": {
+   "days": 19,
+   "changes": 2304,
+   "persistence_abs_err_try": 97065.8
+  },
+  "other": {
+   "days": 93,
+   "changes": 2565,
+   "persistence_abs_err_try": 71211.96
+  }
+ }
 }
