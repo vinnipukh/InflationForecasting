@@ -1,0 +1,39 @@
+{
+  "lightgbm": {
+    "learning_rate": 0.057795428223396714,
+    "num_leaves": 115,
+    "min_child_samples": 199,
+    "feature_fraction": 0.9022064665596329,
+    "bagging_fraction": 0.9136059954547683,
+    "lambda_l1": 0.04350519883322534,
+    "lambda_l2": 7.264642582205434
+  },
+  "xgboost": {
+    "max_depth": 3,
+    "learning_rate": 0.021704301545774057,
+    "min_child_weight": 7.8254958143951505,
+    "subsample": 0.9610179070655606,
+    "colsample_bytree": 0.8756284113731156,
+    "reg_lambda": 0.002586342041527908,
+    "reg_alpha": 0.004267887595134811
+  },
+  "catboost": {
+    "learning_rate": 0.047932958930972616,
+    "depth": 6,
+    "l2_leaf_reg": 28.5583636876094
+  },
+  "lightgbm_hurdle": {
+    "cls_learning_rate": 0.015685757926182355,
+    "cls_num_leaves": 63,
+    "cls_min_child_samples": 382,
+    "cls_feature_fraction": 0.6543320601126295,
+    "reg_learning_rate": 0.030687380224188265,
+    "reg_num_leaves": 111,
+    "reg_min_child_samples": 6,
+    "reg_feature_fraction": 0.8758183762322563,
+    "reg_bagging_fraction": 0.8467126320927018,
+    "reg_lambda_l1": 7.8011234550828314,
+    "reg_lambda_l2": 1.9974242085580358,
+    "threshold": 0.45064779531970744
+  }
+}
