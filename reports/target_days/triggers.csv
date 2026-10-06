@@ -1,0 +1,31 @@
+store,policy,chg,tl,days
+A101,calendar,0.558,0.444,0.229
+A101,own trigger,0.0,0.0,0.029
+A101,calendar + own trigger,0.558,0.444,0.257
+A101,competitors trigger,0.301,0.414,0.2
+A101,calendar + competitors trigger,0.657,0.737,0.371
+Migros,calendar,0.136,0.092,0.2
+Migros,own trigger,0.026,0.015,0.086
+Migros,calendar + own trigger,0.161,0.105,0.257
+Migros,competitors trigger,0.075,0.047,0.143
+Migros,calendar + competitors trigger,0.211,0.138,0.343
+Gurmar,calendar,0.543,0.58,0.167
+Gurmar,own trigger,0.057,0.14,0.104
+Gurmar,calendar + own trigger,0.6,0.72,0.271
+Gurmar,competitors trigger,0.099,0.174,0.146
+Gurmar,calendar + competitors trigger,0.639,0.754,0.292
+Kim,calendar,0.485,0.488,0.226
+Kim,own trigger,0.374,0.353,0.226
+Kim,calendar + own trigger,0.583,0.584,0.355
+Kim,competitors trigger,0.158,0.185,0.129
+Kim,calendar + competitors trigger,0.573,0.571,0.323
+Macrocenter,calendar,0.201,0.14,0.143
+Macrocenter,own trigger,0.349,0.203,0.286
+Macrocenter,calendar + own trigger,0.55,0.343,0.429
+Macrocenter,competitors trigger,0.225,0.159,0.171
+Macrocenter,calendar + competitors trigger,0.426,0.299,0.314
+Hapeloglu,calendar,0.293,0.259,0.2
+Hapeloglu,own trigger,0.138,0.108,0.171
+Hapeloglu,calendar + own trigger,0.33,0.282,0.286
+Hapeloglu,competitors trigger,0.092,0.151,0.171
+Hapeloglu,calendar + competitors trigger,0.357,0.38,0.314

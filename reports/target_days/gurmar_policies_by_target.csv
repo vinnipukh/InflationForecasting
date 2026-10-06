@@ -1,0 +1,10 @@
+block,subset,rows,MAE_persistence,gate_vs_pers_%,every_vs_pers_%,DM_every_minus_gate,p
+B1,all rows,139713,1.8348,1.6318,6.7928,-3.9494,0.0005
+B1,all rows except label_b3,139713,1.8348,1.6318,6.7928,-3.9494,0.0005
+B1,clean rows (real + flat),125365,0.2565,-2.9391,-31.2011,4.3495,0.0002
+B2,all rows,62576,3.9757,6.9521,16.6831,-2.8647,0.0112
+B2,all rows except label_b3,62576,3.9757,6.9521,16.6831,-2.8647,0.0112
+B2,clean rows (real + flat),58940,0.4311,-9.6971,-52.4695,5.7233,0.0
+B3,all rows,60283,1.1463,0.3197,36.1263,-1.3703,0.1895
+B3,all rows except label_b3,60241,0.5489,0.6681,-33.1855,1.6104,0.1269
+B3,clean rows (real + flat),59073,0.0552,-33.7761,-959.2446,3.9528,0.0011
