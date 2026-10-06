@@ -8,6 +8,11 @@ category, then monthly and yearly aggregate inflation. Data come from
 **Current status: pilot completed** — daily regular shelf-price forecasting for one supermarket (Gurmar).
 Pilot specification: [handoff.md](handoff.md).
 
+**Site:** https://vinnipukh.github.io/InflationForecasting/ — results and a per-product forecast explorer (TR/EN).
+Static files in `site/`; refresh its data with `python -m src.site_export` (needs `data/processed` from notebooks
+01–02, retrains the hurdle model with the saved parameters in ~3 min), commit, push — `.github/workflows/pages.yml`
+deploys.
+
 ## Roadmap
 
 | Phase | Scope | Status |

@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gürmar Fiyat Tahminleri</title>
+<meta name="description" content="Gürmar market ürünleri için günlük fiyat tahminleri: LightGBM hurdle modeli ve dünün fiyatı karşılaştırması.">
+<script>
+  // theme before first paint, so there is no flash
+  try { const t = localStorage.getItem('theme'); if (t) document.documentElement.dataset.theme = t; } catch (e) {}
+</script>
+<link rel="stylesheet" href="style.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js" defer></script>
+<script src="app.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#main" data-i18n="skip">İçeriğe atla</a>
+<header class="top">
+  <div class="wrap top-row">
+    <a class="brand" href="#" data-i18n="brand">Gürmar Fiyat Tahminleri</a>
+    <div class="toggles">
+      <div class="seg" role="group" aria-label="Language">
+        <button type="button" data-lang="tr">TR</button>
+        <button type="button" data-lang="en">EN</button>
+      </div>
+      <button type="button" id="theme-btn" class="icon-btn" aria-label="Toggle theme"></button>
+    </div>
+  </div>
+</header>
+
+<main class="wrap" id="main" tabindex="-1">
+  <section class="hero">
+    <h1 data-i18n="h1">Yarın bu ürün kaç lira olacak?</h1>
+    <p class="lead" data-i18n="lead"></p>
+    <h2 data-i18n="cmp_h">Persistence baseline ile karşılaştırma</h2>
+    <p id="cmp-p"></p>
+    <div class="metrics" id="tiles"><p class="note" role="status" data-i18n="loading">Veriler yükleniyor…</p></div>
+  </section>
+
+  <section id="results">
+    <h2 data-i18n="results_h">Sonuçlar</h2>
+    <p data-i18n="results_p"></p>
+    <div class="cols">
+      <div class="card"><div class="chart-box short"><canvas id="chart-MAE" role="img" aria-label="MAE"></canvas></div></div>
+      <div class="card"><div class="chart-box short"><canvas id="chart-MAPE_%" role="img" aria-label="MAPE"></canvas></div></div>
+      <div class="card"><div class="chart-box short"><canvas id="chart-R2_return" role="img" aria-label="R²"></canvas></div></div>
+    </div>
+    <div class="table-scroll"><table id="results-table"></table></div>
+    <p class="note" data-i18n="results_note"></p>
+  </section>
+
+  <section id="explorer">
+    <h2 data-i18n="explorer_h">Ürün gezgini</h2>
+    <p data-i18n="explorer_p"></p>
+    <div class="explorer-controls">
+      <label for="search" class="sr-only" data-i18n="search_label">Ürün ara</label>
+      <input type="search" id="search" autocomplete="off" data-i18n-ph="search_ph">
+      <label for="cat-filter" class="sr-only" data-i18n="cat_label">Kategori</label>
+      <select id="cat-filter"></select>
+      <label class="check"><input type="checkbox" id="only-changes"> <span data-i18n="only_changes">Sadece tahmin edilen değişimler</span></label>
+    </div>
+    <p class="note" id="list-count" role="status"></p>
+    <div class="explorer-grid">
+      <ul id="product-list" class="product-list" role="listbox" aria-label="Products"></ul>
+      <div class="card">
+        <h3 id="product-title"></h3>
+        <p class="muted" id="product-meta"></p>
+        <div class="chart-box"><canvas id="product-chart" aria-label="Product price chart" role="img"></canvas></div>
+        <div class="table-scroll"><table id="pred-table"></table></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="method">
+    <h2 data-i18n="method_h">Nasıl çalışıyor?</h2>
+    <div class="cols" id="method-cols"></div>
+  </section>
+
+  <section id="caveats">
+    <h2 data-i18n="caveats_h">Dikkat edilmesi gerekenler</h2>
+    <ul id="caveats-list"></ul>
+  </section>
+</main>
+
+<footer class="wrap foot">
+  <p data-i18n-html="footer"></p>
+  <p class="muted" id="generated"></p>
+</footer>
+</body>
+</html>
