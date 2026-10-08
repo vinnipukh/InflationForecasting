@@ -63,6 +63,72 @@ const I18N = {
       'Verinin sonuna yakın bazı ürünler Eylül başından beri tam %50 indirimde; kampanya filtresi bunları kalıcı indirim sayıyor, yani etiketler yanlış olabilir.',
       'Bu bir araştırma projesidir; fiyat garantisi veya yatırım tavsiyesi değildir.',
     ],
+    feat_h: 'Değişkenler',
+    feat_p: 'Modelin kullandığı 50 sayısal ve 2 kategorik değişken. T günü tahmini için hepsi T−1 gününün sonunda bilinen bilgiyle hesaplanır; takvim değişkenleri T gününün tarihinden gelir (önceden bilinir). "Normal fiyat" (R): kampanya ayıklanmış fiyat; %0,5\'ten büyük bir düşüş 21 gün kalıcı olana kadar kampanya sayılır, sonra yeni normal fiyat olur. Kazıma boşlukları en fazla 3 gün önceki fiyatla doldurulur.',
+    feat_cols: ['Değişken', 'Nasıl hesaplanıyor'],
+    features: [
+      ['Fiyat gecikmeleri', [
+        ['price_lag_1', 'Dünkü normal fiyat (R, T−1). Aynı zamanda "dünün fiyatı" tahmini ve yüzde değişimin tabanı.'],
+        ['price_lag_7 / 15 / 30', '7, 15 ve 30 gün önceki normal fiyat.'],
+      ]],
+      ['Takvim', [
+        ['dow_sin / dow_cos', 'Haftanın günü, sinüs/kosinüs ile döngüsel kodlanmış (2π·gün/7).'],
+        ['month_sin / month_cos', 'Ay, döngüsel kodlanmış (2π·ay/12).'],
+        ['dom_sin / dom_cos', 'Ayın günü, döngüsel kodlanmış (2π·gün/31).'],
+        ['is_1st / is_15th / is_16th', 'Ayın 1\'i, 15\'i, 16\'sı mı (0/1).'],
+        ['is_month_end', 'Ayın son günü mü (0/1).'],
+        ['days_to_month_end', 'Ay sonuna kalan gün sayısı.'],
+        ['is_holiday', '2026 resmi ve dini bayram günü mü (arife dahil, 0/1).'],
+      ]],
+      ['Dolar/TL', [
+        ['usd_try_rate', 'T−1 sonunda bilinen son USD/TRY kapanışı (Yahoo Finance).'],
+        ['usd_try_rate_change', 'Son günlük USD/TRY yüzde değişimi.'],
+        ['usd_try_change_7d / 30d', 'USD/TRY\'nin 7 ve 30 gün önceye göre yüzde değişimi.'],
+      ]],
+      ['Petrol', [
+        ['brent_try', 'Brent petrol fiyatı TL cinsinden (Brent USD × USD/TRY), T−1 itibarıyla.'],
+        ['brent_try_change_7d / 30d', 'TL Brent\'in 7 ve 30 gün önceye göre yüzde değişimi.'],
+      ]],
+      ['TÜİK', [
+        ['tuik_food_mom_last', 'Son açıklanan TÜİK gıda TÜFE aylık değişimi (%). Açıklamanın ertesi gününden itibaren kullanılır.'],
+        ['tuik_headline_mom_last', 'Son açıklanan genel TÜFE aylık değişimi (%).'],
+        ['tuik_food_3m_cum', 'Son üç açıklamanın gıda TÜFE değişimlerinin bileşik toplamı (%).'],
+        ['days_since_tuik_release', 'Son TÜİK açıklamasından beri geçen gün.'],
+      ]],
+      ['Fiyat geçmişi', [
+        ['price_7d_mean / price_7d_std', 'Normal fiyatın son 7 gündeki ortalaması ve standart sapması.'],
+        ['price_30d_mean', 'Normal fiyatın son 30 gündeki ortalaması.'],
+        ['price_momentum_7d', 'Son 7 gündeki fiyat değişimi: R(T−1) / R(T−8) − 1.'],
+        ['ratio_lag1_mean30', 'Dünkü fiyatın 30 günlük ortalamaya oranı − 1.'],
+        ['days_since_change', 'Normal fiyatın son değiştiği günden (%0,5\'ten büyük) beri geçen gün.'],
+        ['n_changes_30d / 60d', 'Son 30 ve 60 gündeki normal fiyat değişimi sayısı.'],
+        ['last_change_size', 'En son normal fiyat değişiminin büyüklüğü (%).'],
+      ]],
+      ['Kampanya', [
+        ['shelf_price_lag1', 'Dün rafta görünen fiyat (kampanya dahil).'],
+        ['shelf_to_base_lag1', 'Raf fiyatı / normal fiyat − 1 (negatifse indirim var).'],
+        ['on_sale_lag1', 'Ürün dün kampanyada mıydı (0/1).'],
+        ['sale_depth_lag1', 'Dünkü kampanya indiriminin derinliği (%).'],
+        ['days_in_sale_lag1', 'Süren kampanyanın kaçıncı günü.'],
+        ['n_sale_days_60d', 'Son 60 günde kampanyada geçen gün sayısı.'],
+      ]],
+      ['Birim fiyat', [
+        ['log_unit_price_lag1', 'Ürün adından okunan paket büyüklüğüyle hesaplanan kg/litre/adet başına fiyatın logaritması.'],
+        ['rel_unit_price_lag1', 'Aynı kategori ve birimdeki ürünlerin o günkü medyan birim fiyatına göre fark (log): ürün kategorisine göre pahalı mı ucuz mu.'],
+      ]],
+      ['Mağaza geneli', [
+        ['store_reprice_share_1d / 7d', 'Dün (ve son 7 günde ortalama) mağazadaki ürünlerin normal fiyatı değişenlerin payı.'],
+        ['cat_reprice_share_1d / 7d', 'Aynı payın ürünün kendi COICOP kategorisi içindeki değeri.'],
+      ]],
+      ['Web enflasyon endeksi', [
+        ['web_cat_infl_30d', 'Ürünün kategorisindeki normal fiyatların ortalama log değişiminin son 30 gündeki toplamı: kazınan verilerden kurulan kategori enflasyonu.'],
+        ['web_store_infl_30d', 'Aynı endeksin mağaza geneli; kategoriler TÜİK 2026 sepet ağırlıklarıyla ağırlıklandırılır.'],
+      ]],
+      ['Kategorik', [
+        ['coicop', 'Ürünün COICOP harcama grubu (01 gıda, 05 ev eşyası, 09 eğlence, 13 kişisel bakım).'],
+        ['unit_basis', 'Birim fiyatın tabanı: TL/kg, TL/litre, TL/adet ya da yok.'],
+      ]],
+    ],
     footer: 'Kod ve ayrıntılı rapor: <a href="https://github.com/vinnipukh/InflationForecasting">github.com/vinnipukh/InflationForecasting</a> · Veri: <a href="https://github.com/urazkagangunes/InflationResearchStudy">InflationResearchStudy</a>',
     generated: (d, end) => `Veri son günü: ${end} · Sayfa verisi üretildi: ${d}`,
     theme_to_dark: 'Koyu temaya geç', theme_to_light: 'Açık temaya geç',
@@ -130,6 +196,72 @@ const I18N = {
       'Some products near the end of the data have been exactly 50 % off since early September; the sale filter treats these as permanent cuts, so their labels may be wrong.',
       'This is a research project, not a price guarantee or investment advice.',
     ],
+    feat_h: 'Features',
+    feat_p: 'The 50 numeric and 2 categorical features the model uses. For a forecast for day T, all are computed from information known at the end of day T−1; calendar features come from day T\'s date (known in advance). "Regular price" (R): the price with sales filtered out; a drop of more than 0.5 % counts as a sale until it has lasted 21 days, then it becomes the new regular price. Scrape gaps are filled with the last price for at most 3 days.',
+    feat_cols: ['Feature', 'How it is computed'],
+    features: [
+      ['Price lags', [
+        ['price_lag_1', 'Yesterday\'s regular price (R, T−1). Also the "yesterday\'s price" forecast and the base of the percentage change.'],
+        ['price_lag_7 / 15 / 30', 'Regular price 7, 15 and 30 days earlier.'],
+      ]],
+      ['Calendar', [
+        ['dow_sin / dow_cos', 'Day of week, cyclically encoded with sine/cosine (2π·day/7).'],
+        ['month_sin / month_cos', 'Month, cyclically encoded (2π·month/12).'],
+        ['dom_sin / dom_cos', 'Day of month, cyclically encoded (2π·day/31).'],
+        ['is_1st / is_15th / is_16th', 'Is it the 1st, 15th or 16th of the month (0/1).'],
+        ['is_month_end', 'Is it the last day of the month (0/1).'],
+        ['days_to_month_end', 'Days left until month end.'],
+        ['is_holiday', '2026 public or religious holiday, eve included (0/1).'],
+      ]],
+      ['USD/TRY', [
+        ['usd_try_rate', 'Last USD/TRY close known at the end of T−1 (Yahoo Finance).'],
+        ['usd_try_rate_change', 'Latest daily USD/TRY percentage change.'],
+        ['usd_try_change_7d / 30d', 'USD/TRY percentage change vs. 7 and 30 days earlier.'],
+      ]],
+      ['Oil', [
+        ['brent_try', 'Brent oil price in TRY (Brent USD × USD/TRY), as of T−1.'],
+        ['brent_try_change_7d / 30d', 'Percentage change of Brent in TRY vs. 7 and 30 days earlier.'],
+      ]],
+      ['TÜİK', [
+        ['tuik_food_mom_last', 'Latest released TÜİK food CPI monthly change (%). Usable from the day after the release.'],
+        ['tuik_headline_mom_last', 'Latest released headline CPI monthly change (%).'],
+        ['tuik_food_3m_cum', 'Compounded food CPI change over the last three releases (%).'],
+        ['days_since_tuik_release', 'Days since the latest TÜİK release.'],
+      ]],
+      ['Price history', [
+        ['price_7d_mean / price_7d_std', 'Mean and standard deviation of the regular price over the last 7 days.'],
+        ['price_30d_mean', 'Mean regular price over the last 30 days.'],
+        ['price_momentum_7d', 'Price change over the last 7 days: R(T−1) / R(T−8) − 1.'],
+        ['ratio_lag1_mean30', 'Yesterday\'s price divided by the 30-day mean, minus 1.'],
+        ['days_since_change', 'Days since the regular price last changed (by more than 0.5 %).'],
+        ['n_changes_30d / 60d', 'Number of regular price changes in the last 30 and 60 days.'],
+        ['last_change_size', 'Size of the most recent regular price change (%).'],
+      ]],
+      ['Sales', [
+        ['shelf_price_lag1', 'Yesterday\'s shelf price (sales included).'],
+        ['shelf_to_base_lag1', 'Shelf price / regular price − 1 (negative means a discount).'],
+        ['on_sale_lag1', 'Was the product on sale yesterday (0/1).'],
+        ['sale_depth_lag1', 'Depth of yesterday\'s sale discount (%).'],
+        ['days_in_sale_lag1', 'Day number within the running sale.'],
+        ['n_sale_days_60d', 'Days on sale in the last 60 days.'],
+      ]],
+      ['Unit price', [
+        ['log_unit_price_lag1', 'Log price per kg / litre / piece, using the pack size parsed from the product name.'],
+        ['rel_unit_price_lag1', 'Log difference from the median unit price of products in the same category and unit that day: is the product expensive or cheap for its category.'],
+      ]],
+      ['Store-wide', [
+        ['store_reprice_share_1d / 7d', 'Share of the store\'s products whose regular price changed yesterday (and its 7-day average).'],
+        ['cat_reprice_share_1d / 7d', 'The same share within the product\'s own COICOP category.'],
+      ]],
+      ['Web inflation index', [
+        ['web_cat_infl_30d', 'Mean log change of regular prices in the product\'s category, summed over the last 30 days: category inflation built from the scraped data.'],
+        ['web_store_infl_30d', 'Store-wide version of the same index; categories weighted by TÜİK 2026 basket weights.'],
+      ]],
+      ['Categorical', [
+        ['coicop', 'The product\'s COICOP group (01 food, 05 household, 09 recreation, 13 personal care).'],
+        ['unit_basis', 'Base of the unit price: TRY/kg, TRY/litre, TRY/piece or none.'],
+      ]],
+    ],
     footer: 'Code and full report: <a href="https://github.com/vinnipukh/InflationForecasting">github.com/vinnipukh/InflationForecasting</a> · Data: <a href="https://github.com/urazkagangunes/InflationResearchStudy">InflationResearchStudy</a>',
     generated: (d, end) => `Last data day: ${end} · Page data generated: ${d}`,
     theme_to_dark: 'Switch to dark theme', theme_to_light: 'Switch to light theme',
@@ -192,6 +324,10 @@ function renderStatic() {
   document.querySelectorAll('[data-i18n-ph]').forEach((el) => { el.placeholder = t(el.dataset.i18nPh); });
   $('#method-cols').innerHTML = t('method').map(([h, p]) => `<div class="card"><h3>${h}</h3><p>${p}</p></div>`).join('');
   $('#caveats-list').innerHTML = t('caveats').map((c) => `<li>${c}</li>`).join('');
+  $('#feat-table').innerHTML = `<thead><tr><th>${t('feat_cols')[0]}</th><th class="l">${t('feat_cols')[1]}</th></tr></thead><tbody>`
+    + t('features').map(([g, rows]) => `<tr class="grp"><td colspan="2">${g}</td></tr>`
+      + rows.map(([f, d]) => `<tr><td><code>${f}</code></td><td class="l d">${d}</td></tr>`).join('')).join('')
+    + '</tbody>';
   renderThemeButton();
 }
 
