@@ -1,0 +1,3864 @@
+{
+ "generated": "2026-10-09",
+ "data_end": "2026-10-09",
+ "stores": [
+  {
+   "store": "A101",
+   "days": 98,
+   "first": "2026-03-14",
+   "last": "2026-10-09",
+   "products_median": 7036,
+   "by_day_of_month": [
+    {
+     "key": 1,
+     "changes": 253,
+     "products": 29992,
+     "days": 4
+    },
+    {
+     "key": 2,
+     "changes": 152,
+     "products": 23137,
+     "days": 3
+    },
+    {
+     "key": 3,
+     "changes": 145,
+     "products": 16159,
+     "days": 2
+    },
+    {
+     "key": 4,
+     "changes": 7,
+     "products": 23136,
+     "days": 3
+    },
+    {
+     "key": 5,
+     "changes": 355,
+     "products": 30053,
+     "days": 4
+    },
+    {
+     "key": 6,
+     "changes": 201,
+     "products": 30055,
+     "days": 4
+    },
+    {
+     "key": 7,
+     "changes": 284,
+     "products": 29941,
+     "days": 4
+    },
+    {
+     "key": 8,
+     "changes": 2,
+     "products": 21910,
+     "days": 3
+    },
+    {
+     "key": 9,
+     "changes": 290,
+     "products": 21915,
+     "days": 3
+    },
+    {
+     "key": 10,
+     "changes": 0,
+     "products": 13889,
+     "days": 2
+    },
+    {
+     "key": 11,
+     "changes": 0,
+     "products": 13889,
+     "days": 2
+    },
+    {
+     "key": 12,
+     "changes": 271,
+     "products": 21802,
+     "days": 3
+    },
+    {
+     "key": 13,
+     "changes": 11,
+     "products": 22001,
+     "days": 3
+    },
+    {
+     "key": 14,
+     "changes": 260,
+     "products": 28639,
+     "days": 4
+    },
+    {
+     "key": 15,
+     "changes": 341,
+     "products": 28637,
+     "days": 4
+    },
+    {
+     "key": 16,
+     "changes": 187,
+     "products": 28770,
+     "days": 4
+    },
+    {
+     "key": 17,
+     "changes": 3,
+     "products": 28757,
+     "days": 4
+    },
+    {
+     "key": 18,
+     "changes": 379,
+     "products": 28686,
+     "days": 4
+    },
+    {
+     "key": 19,
+     "changes": 112,
+     "products": 28795,
+     "days": 4
+    },
+    {
+     "key": 20,
+     "changes": 47,
+     "products": 21601,
+     "days": 3
+    },
+    {
+     "key": 21,
+     "changes": 85,
+     "products": 14738,
+     "days": 2
+    },
+    {
+     "key": 22,
+     "changes": 120,
+     "products": 14730,
+     "days": 2
+    },
+    {
+     "key": 23,
+     "changes": 396,
+     "products": 22030,
+     "days": 3
+    },
+    {
+     "key": 24,
+     "changes": 18,
+     "products": 30278,
+     "days": 4
+    },
+    {
+     "key": 25,
+     "changes": 202,
+     "products": 28999,
+     "days": 4
+    },
+    {
+     "key": 26,
+     "changes": 196,
+     "products": 21783,
+     "days": 3
+    },
+    {
+     "key": 27,
+     "changes": 4,
+     "products": 14893,
+     "days": 2
+    },
+    {
+     "key": 28,
+     "changes": 142,
+     "products": 14904,
+     "days": 2
+    },
+    {
+     "key": 29,
+     "changes": 161,
+     "products": 21915,
+     "days": 3
+    },
+    {
+     "key": 30,
+     "changes": 157,
+     "products": 29991,
+     "days": 4
+    },
+    {
+     "key": 31,
+     "changes": 2,
+     "products": 14868,
+     "days": 2
+    }
+   ],
+   "by_weekday": [
+    {
+     "key": 0,
+     "changes": 93,
+     "products": 109566,
+     "days": 15
+    },
+    {
+     "key": 1,
+     "changes": 338,
+     "products": 87151,
+     "days": 12
+    },
+    {
+     "key": 2,
+     "changes": 1695,
+     "products": 103340,
+     "days": 14
+    },
+    {
+     "key": 3,
+     "changes": 172,
+     "products": 111729,
+     "days": 15
+    },
+    {
+     "key": 4,
+     "changes": 50,
+     "products": 96817,
+     "days": 13
+    },
+    {
+     "key": 5,
+     "changes": 2428,
+     "products": 102669,
+     "days": 14
+    },
+    {
+     "key": 6,
+     "changes": 7,
+     "products": 109621,
+     "days": 15
+    }
+   ],
+   "target": {
+    "days": 22,
+    "changes": 1157,
+    "persistence_abs_err_try": 31090.61
+   },
+   "other": {
+    "days": 76,
+    "changes": 3626,
+    "persistence_abs_err_try": 138343.98
+   }
+  },
+  {
+   "store": "Arden",
+   "days": 92,
+   "first": "2026-03-03",
+   "last": "2026-10-09",
+   "products_median": 6773,
+   "by_day_of_month": [
+    {
+     "key": 1,
+     "changes": 85,
+     "products": 14507,
+     "days": 3
+    },
+    {
+     "key": 2,
+     "changes": 0,
+     "products": 6800,
+     "days": 1
+    },
+    {
+     "key": 3,
+     "changes": 38,
+     "products": 16301,
+     "days": 3
+    },
+    {
+     "key": 4,
+     "changes": 66,
+     "products": 15733,
+     "days": 4
+    },
+    {
+     "key": 5,
+     "changes": 575,
+     "products": 15055,
+     "days": 4
+    },
+    {
+     "key": 6,
+     "changes": 52,
+     "products": 6885,
+     "days": 2
+    },
+    {
+     "key": 7,
+     "changes": 0,
+     "products": 7263,
+     "days": 2
+    },
+    {
+     "key": 8,
+     "changes": 87,
+     "products": 7861,
+     "days": 2
+    },
+    {
+     "key": 9,
+     "changes": 327,
+     "products": 14040,
+     "days": 3
+    },
+    {
+     "key": 10,
+     "changes": 184,
+     "products": 9845,
+     "days": 2
+    },
+    {
+     "key": 11,
+     "changes": 50,
+     "products": 9758,
+     "days": 2
+    },
+    {
+     "key": 12,
+     "changes": 15,
+     "products": 14299,
+     "days": 2
+    },
+    {
+     "key": 13,
+     "changes": 39,
+     "products": 21054,
+     "days": 3
+    },
+    {
+     "key": 14,
+     "changes": 147,
+     "products": 21006,
+     "days": 3
+    },
+    {
+     "key": 15,
+     "changes": 28,
+     "products": 14262,
+     "days": 2
+    },
+    {
+     "key": 16,
+     "changes": 30,
+     "products": 14262,
+     "days": 2
+    },
+    {
+     "key": 17,
+     "changes": 181,
+     "products": 28251,
+     "days": 4
+    },
+    {
+     "key": 18,
+     "changes": 5,
+     "products": 27794,
+     "days": 4
+    },
+    {
+     "key": 19,
+     "changes": 115,
+     "products": 27487,
+     "days": 4
+    },
+    {
+     "key": 20,
+     "changes": 36,
+     "products": 19675,
+     "days": 3
+    },
+    {
+     "key": 21,
+     "changes": 71,
+     "products": 19821,
+     "days": 3
+    },
+    {
+     "key": 22,
+     "changes": 25,
+     "products": 20676,
+     "days": 3
+    },
+    {
+     "key": 23,
+     "changes": 39,
+     "products": 20706,
+     "days": 3
+    },
+    {
+     "key": 24,
+     "changes": 106,
+     "products": 26191,
+     "days": 5
+    },
+    {
+     "key": 25,
+     "changes": 0,
+     "products": 26696,
+     "days": 4
+    },
+    {
+     "key": 26,
+     "changes": 98,
+     "products": 27283,
+     "days": 4
+    },
+    {
+     "key": 27,
+     "changes": 25,
+     "products": 22774,
+     "days": 4
+    },
+    {
+     "key": 28,
+     "changes": 167,
+     "products": 22364,
+     "days": 4
+    },
+    {
+     "key": 29,
+     "changes": 22,
+     "products": 14969,
+     "days": 3
+    },
+    {
+     "key": 30,
+     "changes": 13,
+     "products": 14648,
+     "days": 3
+    },
+    {
+     "key": 31,
+     "changes": 69,
+     "products": 7567,
+     "days": 1
+    }
+   ],
+   "by_weekday": [
+    {
+     "key": 0,
+     "changes": 150,
+     "products": 82436,
+     "days": 13
+    },
+    {
+     "key": 1,
+     "changes": 802,
+     "products": 88117,
+     "days": 15
+    },
+    {
+     "key": 2,
+     "changes": 210,
+     "products": 89202,
+     "days": 16
+    },
+    {
+     "key": 3,
+     "changes": 619,
+     "products": 95955,
+     "days": 18
+    },
+    {
+     "key": 4,
+     "changes": 374,
+     "products": 55725,
+     "days": 10
+    },
+    {
+     "key": 5,
+     "changes": 362,
+     "products": 54520,
+     "days": 9
+    },
+    {
+     "key": 6,
+     "changes": 178,
+     "products": 69878,
+     "days": 11
+    }
+   ],
+   "target": {
+    "days": 17,
+    "changes": 514,
+    "persistence_abs_err_try": 13294.08
+   },
+   "other": {
+    "days": 75,
+    "changes": 2181,
+    "persistence_abs_err_try": 51150.56
+   }
+  },
+  {
+   "store": "Basdas",
+   "days": 85,
+   "first": "2026-02-22",
+   "last": "2026-05-31",
+   "products_median": 706,
+   "by_day_of_month": [
+    {
+     "key": 1,
+     "changes": 11,
+     "products": 1364,
+     "days": 2
+    },
+    {
+     "key": 2,
+     "changes": 93,
+     "products": 1598,
+     "days": 2
+    },
+    {
+     "key": 3,
+     "changes": 9,
+     "products": 1614,
+     "days": 2
+    },
+    {
+     "key": 4,
+     "changes": 29,
+     "products": 1652,
+     "days": 3
+    },
+    {
+     "key": 5,
+     "changes": 22,
+     "products": 2350,
+     "days": 3
+    },
+    {
+     "key": 6,
+     "changes": 16,
+     "products": 1370,
+     "days": 2
+    },
+    {
+     "key": 7,
+     "changes": 5,
+     "products": 1028,
+     "days": 2
+    },
+    {
+     "key": 8,
+     "changes": 7,
+     "products": 1793,
+     "days": 3
+    },
+    {
+     "key": 9,
+     "changes": 24,
+     "products": 1301,
+     "days": 2
+    },
+    {
+     "key": 10,
+     "changes": 12,
+     "products": 789,
+     "days": 2
+    },
+    {
+     "key": 11,
+     "changes": 12,
+     "products": 1671,
+     "days": 3
+    },
+    {
+     "key": 12,
+     "changes": 9,
+     "products": 864,
+     "days": 2
+    },
+    {
+     "key": 13,
+     "changes": 15,
+     "products": 805,
+     "days": 2
+    },
+    {
+     "key": 14,
+     "changes": 5,
+     "products": 1857,
+     "days": 3
+    },
+    {
+     "key": 15,
+     "changes": 1,
+     "products": 987,
+     "days": 2
+    },
+    {
+     "key": 16,
+     "changes": 26,
+     "products": 1433,
+     "days": 2
+    },
+    {
+     "key": 17,
+     "changes": 69,
+     "products": 2095,
+     "days": 3
+    },
+    {
+     "key": 18,
+     "changes": 51,
+     "products": 2101,
+     "days": 3
+    },
+    {
+     "key": 19,
+     "changes": 4,
+     "products": 2101,
+     "days": 3
+    },
+    {
+     "key": 20,
+     "changes": 32,
+     "products": 1444,
+     "days": 2
+    },
+    {
+     "key": 21,
+     "changes": 10,
+     "products": 1474,
+     "days": 2
+    },
+    {
+     "key": 22,
+     "changes": 1,
+     "products": 2784,
+     "days": 4
+    },
+    {
+     "key": 23,
+     "changes": 79,
+     "products": 2709,
+     "days": 4
+    },
+    {
+     "key": 24,
+     "changes": 29,
+     "products": 2865,
+     "days": 4
+    },
+    {
+     "key": 25,
+     "changes": 84,
+     "products": 2805,
+     "days": 4
+    },
+    {
+     "key": 26,
+     "changes": 19,
+     "products": 2812,
+     "days": 4
+    },
+    {
+     "key": 27,
+     "changes": 15,
+     "products": 2757,
+     "days": 4
+    },
+    {
+     "key": 28,
+     "changes": 36,
+     "products": 3139,
+     "days": 4
+    },
+    {
+     "key": 29,
+     "changes": 0,
+     "products": 2324,
+     "days": 3
+    },
+    {
+     "key": 30,
+     "changes": 5,
+     "products": 1467,
+     "days": 2
+    },
+    {
+     "key": 31,
+     "changes": 21,
+     "products": 1467,
+     "days": 2
+    }
+   ],
+   "by_weekday": [
+    {
+     "key": 0,
+     "changes": 191,
+     "products": 9612,
+     "days": 14
+    },
+    {
+     "key": 1,
+     "changes": 142,
+     "products": 8870,
+     "days": 13
+    },
+    {
+     "key": 2,
+     "changes": 154,
+     "products": 7110,
+     "days": 11
+    },
+    {
+     "key": 3,
+     "changes": 104,
+     "products": 7346,
+     "days": 10
+    },
+    {
+     "key": 4,
+     "changes": 76,
+     "products": 7037,
+     "days": 11
+    },
+    {
+     "key": 5,
+     "changes": 81,
+     "products": 7416,
+     "days": 12
+    },
+    {
+     "key": 6,
+     "changes": 3,
+     "products": 9429,
+     "days": 14
+    }
+   ],
+   "target": {
+    "days": 20,
+    "changes": 92,
+    "persistence_abs_err_try": 2375.59
+   },
+   "other": {
+    "days": 65,
+    "changes": 659,
+    "persistence_abs_err_try": 13931.53
+   }
+  },
+  {
+   "store": "Baskent",
+   "days": 93,
+   "first": "2026-02-25",
+   "last": "2026-06-01",
+   "products_median": 89,
+   "by_day_of_month": [
+    {
+     "key": 1,
+     "changes": 45,
+     "products": 573,
+     "days": 4
+    },
+    {
+     "key": 2,
+     "changes": 0,
+     "products": 480,
+     "days": 3
+    },
+    {
+     "key": 3,
+     "changes": 0,
+     "products": 474,
+     "days": 3
+    },
+    {
+     "key": 4,
+     "changes": 0,
+     "products": 476,
+     "days": 3
+    },
+    {
+     "key": 5,
+     "changes": 0,
+     "products": 477,
+     "days": 3
+    },
+    {
+     "key": 6,
+     "changes": 0,
+     "products": 477,
+     "days": 3
+    },
+    {
+     "key": 7,
+     "changes": 0,
+     "products": 171,
+     "days": 2
+    },
+    {
+     "key": 8,
+     "changes": 0,
+     "products": 171,
+     "days": 2
+    },
+    {
+     "key": 9,
+     "changes": 0,
+     "products": 483,
+     "days": 3
+    },
+    {
+     "key": 10,
+     "changes": 0,
+     "products": 483,
+     "days": 3
+    },
+    {
+     "key": 11,
+     "changes": 0,
+     "products": 483,
+     "days": 3
+    },
+    {
+     "key": 12,
+     "changes": 0,
+     "products": 483,
+     "days": 3
+    },
+    {
+     "key": 13,
+     "changes": 43,
+     "products": 481,
+     "days": 3
+    },
+    {
+     "key": 14,
+     "changes": 0,
+     "products": 481,
+     "days": 3
+    },
+    {
+     "key": 15,
+     "changes": 0,
+     "products": 489,
+     "days": 3
+    },
+    {
+     "key": 16,
+     "changes": 0,
+     "products": 483,
+     "days": 3
+    },
+    {
+     "key": 17,
+     "changes": 0,
+     "products": 181,
+     "days": 2
+    },
+    {
+     "key": 18,
+     "changes": 0,
+     "products": 181,
+     "days": 2
+    },
+    {
+     "key": 19,
+     "changes": 0,
+     "products": 267,
+     "days": 3
+    },
+    {
+     "key": 20,
+     "changes": 0,
+     "products": 264,
+     "days": 3
+    },
+    {
+     "key": 21,
+     "changes": 1,
+     "products": 264,
+     "days": 3
+    },
+    {
+     "key": 22,
+     "changes": 0,
+     "products": 249,
+     "days": 3
+    },
+    {
+     "key": 23,
+     "changes": 0,
+     "products": 255,
+     "days": 3
+    },
+    {
+     "key": 24,
+     "changes": 0,
+     "products": 255,
+     "days": 3
+    },
+    {
+     "key": 25,
+     "changes": 0,
+     "products": 562,
+     "days": 4
+    },
+    {
+     "key": 26,
+     "changes": 0,
+     "products": 567,
+     "days": 4
+    },
+    {
+     "key": 27,
+     "changes": 0,
+     "products": 571,
+     "days": 4
+    },
+    {
+     "key": 28,
+     "changes": 0,
+     "products": 572,
+     "days": 4
+    },
+    {
+     "key": 29,
+     "changes": 0,
+     "products": 264,
+     "days": 3
+    },
+    {
+     "key": 30,
+     "changes": 4,
+     "products": 264,
+     "days": 3
+    },
+    {
+     "key": 31,
+     "changes": 0,
+     "products": 175,
+     "days": 2
+    }
+   ],
+   "by_weekday": [
+    {
+     "key": 0,
+     "changes": 1,
+     "products": 1883,
+     "days": 14
+    },
+    {
+     "key": 1,
+     "changes": 1,
+     "products": 1481,
+     "days": 12
+    },
+    {
+     "key": 2,
+     "changes": 43,
+     "products": 1787,
+     "days": 13
+    },
+    {
+     "key": 3,
+     "changes": 4,
+     "products": 1875,
+     "days": 14
+    },
+    {
+     "key": 4,
+     "changes": 0,
+     "products": 1878,
+     "days": 14
+    },
+    {
+     "key": 5,
+     "changes": 0,
+     "products": 1578,
+     "days": 13
+    },
+    {
+     "key": 6,
+     "changes": 44,
+     "products": 1574,
+     "days": 13
+    }
+   ],
+   "target": {
+    "days": 24,
+    "changes": 45,
+    "persistence_abs_err_try": 325.6
+   },
+   "other": {
+    "days": 69,
+    "changes": 48,
+    "persistence_abs_err_try": 668.8
+   }
+  },
+  {
+   "store": "Cagri",
+   "days": 37,
+   "first": "2026-03-02",
+   "last": "2026-10-09",
+   "products_median": 6743,
+   "by_day_of_month": [
+    {
+     "key": 1,
+     "changes": 925,
+     "products": 13316,
+     "days": 2
+    },
+    {
+     "key": 2,
+     "changes": 537,
+     "products": 19396,
+     "days": 3
+    },
+    {
+     "key": 3,
+     "changes": 299,
+     "products": 19409,
+     "days": 3
+    },
+    {
+     "key": 4,
+     "changes": 881,
+     "products": 19422,
+     "days": 3
+    },
+    {
+     "key": 5,
+     "changes": 301,
+     "products": 19434,
+     "days": 3
+    },
+    {
+     "key": 6,
+     "changes": 35,
+     "products": 12475,
+     "days": 2
+    },
+    {
+     "key": 7,
+     "changes": 112,
+     "products": 12246,
+     "days": 2
+    },
+    {
+     "key": 8,
+     "changes": 7,
+     "products": 5500,
+     "days": 1
+    },
+    {
+     "key": 9,
+     "changes": 12,
+     "products": 5424,
+     "days": 1
+    },
+    {
+     "key": 17,
+     "changes": 388,
+     "products": 6792,
+     "days": 1
+    },
+    {
+     "key": 18,
+     "changes": 68,
+     "products": 6756,
+     "days": 1
+    },
+    {
+     "key": 19,
+     "changes": 48,
+     "products": 6744,
+     "days": 1
+    },
+    {
+     "key": 20,
+     "changes": 325,
+     "products": 6746,
+     "days": 1
+    },
+    {
+     "key": 21,
+     "changes": 43,
+     "products": 6743,
+     "days": 1
+    },
+    {
+     "key": 22,
+     "changes": 4,
+     "products": 6744,
+     "days": 1
+    },
+    {
+     "key": 23,
+     "changes": 0,
+     "products": 6768,
+     "days": 1
+    },
+    {
+     "key": 24,
+     "changes": 88,
+     "products": 13477,
+     "days": 2
+    },
+    {
+     "key": 25,
+     "changes": 27,
+     "products": 6759,
+     "days": 1
+    },
+    {
+     "key": 26,
+     "changes": 41,
+     "products": 6736,
+     "days": 1
+    },
+    {
+     "key": 27,
+     "changes": 38,
+     "products": 6745,
+     "days": 1
+    },
+    {
+     "key": 28,
+     "changes": 39,
+     "products": 6747,
+     "days": 1
+    },
+    {
+     "key": 29,
+     "changes": 32,
+     "products": 6687,
+     "days": 1
+    },
+    {
+     "key": 30,
+     "changes": 32,
+     "products": 13335,
+     "days": 2
+    },
+    {
+     "key": 31,
+     "changes": 84,
+     "products": 6752,
+     "days": 1
+    }
+   ],
+   "by_weekday": [
+    {
+     "key": 0,
+     "changes": 1138,
+     "products": 39684,
+     "days": 6
+    },
+    {
+     "key": 1,
+     "changes": 672,
+     "products": 32871,
+     "days": 5
+    },
+    {
+     "key": 2,
+     "changes": 336,
+     "products": 39258,
+     "days": 6
+    },
+    {
+     "key": 3,
+     "changes": 1126,
+     "products": 45884,
+     "days": 7
+    },
+    {
+     "key": 4,
+     "changes": 950,
+     "products": 31361,
+     "days": 5
+    },
+    {
+     "key": 5,
+     "changes": 139,
+     "products": 25992,
+     "days": 4
+    },
+    {
+     "key": 6,
+     "changes": 5,
+     "products": 26103,
+     "days": 4
+    }
+   ],
+   "target": {
+    "days": 3,
+    "changes": 926,
+    "persistence_abs_err_try": 33102.49
+   },
+   "other": {
+    "days": 34,
+    "changes": 3440,
+    "persistence_abs_err_try": 139080.0
+   }
+  },
+  {
+   "store": "CarrefourSA",
+   "days": 74,
+   "first": "2026-02-26",
+   "last": "2026-05-18",
+   "products_median": 10501,
+   "by_day_of_month": [
+    {
+     "key": 1,
+     "changes": 656,
+     "products": 19216,
+     "days": 2
+    },
+    {
+     "key": 2,
+     "changes": 784,
+     "products": 31601,
+     "days": 3
+    },
+    {
+     "key": 3,
+     "changes": 320,
+     "products": 29846,
+     "days": 3
+    },
+    {
+     "key": 4,
+     "changes": 355,
+     "products": 27003,
+     "days": 3
+    },
+    {
+     "key": 5,
+     "changes": 177,
+     "products": 26795,
+     "days": 3
+    },
+    {
+     "key": 6,
+     "changes": 198,
+     "products": 28687,
+     "days": 3
+    },
+    {
+     "key": 7,
+     "changes": 840,
+     "products": 30385,
+     "days": 3
+    },
+    {
+     "key": 8,
+     "changes": 436,
+     "products": 30899,
+     "days": 3
+    },
+    {
+     "key": 9,
+     "changes": 1205,
+     "products": 30826,
+     "days": 3
+    },
+    {
+     "key": 10,
+     "changes": 194,
+     "products": 29007,
+     "days": 3
+    },
+    {
+     "key": 11,
+     "changes": 533,
+     "products": 27385,
+     "days": 3
+    },
+    {
+     "key": 12,
+     "changes": 313,
+     "products": 29148,
+     "days": 3
+    },
+    {
+     "key": 13,
+     "changes": 365,
+     "products": 30945,
+     "days": 3
+    },
+    {
+     "key": 14,
+     "changes": 307,
+     "products": 31784,
+     "days": 3
+    },
+    {
+     "key": 15,
+     "changes": 515,
+     "products": 31918,
+     "days": 3
+    },
+    {
+     "key": 16,
+     "changes": 131,
+     "products": 32251,
+     "days": 3
+    },
+    {
+     "key": 17,
+     "changes": 1033,
+     "products": 31150,
+     "days": 3
+    },
+    {
+     "key": 18,
+     "changes": 124,
+     "products": 31159,
+     "days": 3
+    },
+    {
+     "key": 19,
+     "changes": 0,
+     "products": 11329,
+     "days": 1
+    },
+    {
+     "key": 20,
+     "changes": 64,
+     "products": 11402,
+     "days": 1
+    },
+    {
+     "key": 21,
+     "changes": 1137,
+     "products": 19595,
+     "days": 2
+    },
+    {
+     "key": 22,
+     "changes": 0,
+     "products": 20124,
+     "days": 2
+    },
+    {
+     "key": 23,
+     "changes": 0,
+     "products": 11057,
+     "days": 1
+    },
+    {
+     "key": 24,
+     "changes": 0,
+     "products": 11057,
+     "days": 1
+    },
+    {
+     "key": 25,
+     "changes": 2,
+     "products": 10571,
+     "days": 1
+    },
+    {
+     "key": 26,
+     "changes": 1306,
+     "products": 20929,
+     "days": 2
+    },
+    {
+     "key": 27,
+     "changes": 118,
+     "products": 33001,
+     "days": 3
+    },
+    {
+     "key": 28,
+     "changes": 45,
+     "products": 22064,
+     "days": 2
+    },
+    {
+     "key": 29,
+     "changes": 206,
+     "products": 19740,
+     "days": 2
+    },
+    {
+     "key": 30,
+     "changes": 111,
+     "products": 17885,
+     "days": 2
+    },
+    {
+     "key": 31,
+     "changes": 94,
+     "products": 10603,
+     "days": 1
+    }
+   ],
+   "by_weekday": [
+    {
+     "key": 0,
+     "changes": 1556,
+     "products": 100352,
+     "days": 10
+    },
+    {
+     "key": 1,
+     "changes": 2151,
+     "products": 101422,
+     "days": 10
+    },
+    {
+     "key": 2,
+     "changes": 1522,
+     "products": 110105,
+     "days": 11
+    },
+    {
+     "key": 3,
+     "changes": 3312,
+     "products": 119242,
+     "days": 12
+    },
+    {
+     "key": 4,
+     "changes": 1376,
+     "products": 123696,
+     "days": 12
+    },
+    {
+     "key": 5,
+     "changes": 769,
+     "products": 104265,
+     "days": 10
+    },
+    {
+     "key": 6,
+     "changes": 883,
+     "products": 90280,
+     "days": 9
+    }
+   ],
+   "target": {
+    "days": 16,
+    "changes": 1691,
+    "persistence_abs_err_try": 415797.36
+   },
+   "other": {
+    "days": 58,
+    "changes": 9878,
+    "persistence_abs_err_try": 2103914.95
+   }
+  },
+  {
+   "store": "Gurmar",
+   "days": 112,
+   "first": "2026-02-22",
+   "last": "2026-10-04",
+   "products_median": 4101,
+   "by_day_of_month": [
+    {
+     "key": 1,
+     "changes": 1432,
+     "products": 16606,
+     "days": 4
+    },
+    {
+     "key": 2,
+     "changes": 111,
+     "products": 21401,
+     "days": 5
+    },
+    {
+     "key": 3,
+     "changes": 298,
+     "products": 20412,
+     "days": 5
+    },
+    {
+     "key": 4,
+     "changes": 166,
+     "products": 20454,
+     "days": 5
+    },
+    {
+     "key": 5,
+     "changes": 57,
+     "products": 13210,
+     "days": 3
+    },
+    {
+     "key": 6,
+     "changes": 52,
+     "products": 12347,
+     "days": 3
+    },
+    {
+     "key": 7,
+     "changes": 71,
+     "products": 7331,
+     "days": 2
+    },
+    {
+     "key": 8,
+     "changes": 125,
+     "products": 8172,
+     "days": 2
+    },
+    {
+     "key": 9,
+     "changes": 99,
+     "products": 13174,
+     "days": 3
+    },
+    {
+     "key": 10,
+     "changes": 93,
+     "products": 13136,
+     "days": 3
+    },
+    {
+     "key": 11,
+     "changes": 50,
+     "products": 13493,
+     "days": 3
+    },
+    {
+     "key": 12,
+     "changes": 68,
+     "products": 13489,
+     "days": 3
+    },
+    {
+     "key": 13,
+     "changes": 84,
+     "products": 12763,
+     "days": 3
+    },
+    {
+     "key": 14,
+     "changes": 150,
+     "products": 12741,
+     "days": 3
+    },
+    {
+     "key": 15,
+     "changes": 206,
+     "products": 13608,
+     "days": 3
+    },
+    {
+     "key": 16,
+     "changes": 331,
+     "products": 13521,
+     "days": 3
+    },
+    {
+     "key": 17,
+     "changes": 88,
+     "products": 12491,
+     "days": 3
+    },
+    {
+     "key": 18,
+     "changes": 65,
+     "products": 11461,
+     "days": 4
+    },
+    {
+     "key": 19,
+     "changes": 37,
+     "products": 16881,
+     "days": 4
+    },
+    {
+     "key": 20,
+     "changes": 91,
+     "products": 17801,
+     "days": 4
+    },
+    {
+     "key": 21,
+     "changes": 115,
+     "products": 17723,
+     "days": 4
+    },
+    {
+     "key": 22,
+     "changes": 90,
+     "products": 21768,
+     "days": 5
+    },
+    {
+     "key": 23,
+     "changes": 56,
+     "products": 15780,
+     "days": 4
+    },
+    {
+     "key": 24,
+     "changes": 153,
+     "products": 16890,
+     "days": 4
+    },
+    {
+     "key": 25,
+     "changes": 152,
+     "products": 17678,
+     "days": 4
+    },
+    {
+     "key": 26,
+     "changes": 40,
+     "products": 17796,
+     "days": 4
+    },
+    {
+     "key": 27,
+     "changes": 98,
+     "products": 22674,
+     "days": 5
+    },
+    {
+     "key": 28,
+     "changes": 88,
+     "products": 21402,
+     "days": 5
+    },
+    {
+     "key": 29,
+     "changes": 39,
+     "products": 16847,
+     "days": 4
+    },
+    {
+     "key": 30,
+     "changes": 5,
+     "products": 12769,
+     "days": 3
+    },
+    {
+     "key": 31,
+     "changes": 22,
+     "products": 9033,
+     "days": 2
+    }
+   ],
+   "by_weekday": [
+    {
+     "key": 0,
+     "changes": 613,
+     "products": 69272,
+     "days": 16
+    },
+    {
+     "key": 1,
+     "changes": 1081,
+     "products": 61317,
+     "days": 16
+    },
+    {
+     "key": 2,
+     "changes": 707,
+     "products": 67645,
+     "days": 16
+    },
+    {
+     "key": 3,
+     "changes": 436,
+     "products": 64473,
+     "days": 15
+    },
+    {
+     "key": 4,
+     "changes": 610,
+     "products": 68018,
+     "days": 16
+    },
+    {
+     "key": 5,
+     "changes": 249,
+     "products": 69980,
+     "days": 16
+    },
+    {
+     "key": 6,
+     "changes": 836,
+     "products": 74147,
+     "days": 17
+    }
+   ],
+   "target": {
+    "days": 19,
+    "changes": 2165,
+    "persistence_abs_err_try": 84827.37
+   },
+   "other": {
+    "days": 93,
+    "changes": 2367,
+    "persistence_abs_err_try": 63641.32
+   }
+  },
+  {
+   "store": "Hapeloglu",
+   "days": 134,
+   "first": "2026-02-25",
+   "last": "2026-10-09",
+   "products_median": 6237,
+   "by_day_of_month": [
+    {
+     "key": 1,
+     "changes": 252,
+     "products": 37079,
+     "days": 6
+    },
+    {
+     "key": 2,
+     "changes": 164,
+     "products": 31281,
+     "days": 6
+    },
+    {
+     "key": 3,
+     "changes": 192,
+     "products": 24747,
+     "days": 5
+    },
+    {
+     "key": 4,
+     "changes": 318,
+     "products": 30475,
+     "days": 5
+    },
+    {
+     "key": 5,
+     "changes": 343,
+     "products": 30508,
+     "days": 5
+    },
+    {
+     "key": 6,
+     "changes": 184,
+     "products": 30501,
+     "days": 5
+    },
+    {
+     "key": 7,
+     "changes": 204,
+     "products": 30463,
+     "days": 5
+    },
+    {
+     "key": 8,
+     "changes": 188,
+     "products": 24596,
+     "days": 4
+    },
+    {
+     "key": 9,
+     "changes": 183,
+     "products": 24484,
+     "days": 4
+    },
+    {
+     "key": 10,
+     "changes": 183,
+     "products": 18908,
+     "days": 3
+    },
+    {
+     "key": 11,
+     "changes": 143,
+     "products": 18999,
+     "days": 3
+    },
+    {
+     "key": 12,
+     "changes": 223,
+     "products": 25452,
+     "days": 4
+    },
+    {
+     "key": 13,
+     "changes": 116,
+     "products": 25232,
+     "days": 4
+    },
+    {
+     "key": 14,
+     "changes": 245,
+     "products": 24934,
+     "days": 4
+    },
+    {
+     "key": 15,
+     "changes": 350,
+     "products": 25025,
+     "days": 4
+    },
+    {
+     "key": 16,
+     "changes": 85,
+     "products": 25160,
+     "days": 4
+    },
+    {
+     "key": 17,
+     "changes": 222,
+     "products": 25172,
+     "days": 4
+    },
+    {
+     "key": 18,
+     "changes": 170,
+     "products": 25092,
+     "days": 4
+    },
+    {
+     "key": 19,
+     "changes": 112,
+     "products": 25146,
+     "days": 4
+    },
+    {
+     "key": 20,
+     "changes": 259,
+     "products": 25109,
+     "days": 4
+    },
+    {
+     "key": 21,
+     "changes": 219,
+     "products": 25129,
+     "days": 4
+    },
+    {
+     "key": 22,
+     "changes": 107,
+     "products": 18571,
+     "days": 3
+    },
+    {
+     "key": 23,
+     "changes": 161,
+     "products": 18633,
+     "days": 3
+    },
+    {
+     "key": 24,
+     "changes": 435,
+     "products": 30874,
+     "days": 5
+    },
+    {
+     "key": 25,
+     "changes": 218,
+     "products": 30476,
+     "days": 5
+    },
+    {
+     "key": 26,
+     "changes": 216,
+     "products": 30636,
+     "days": 5
+    },
+    {
+     "key": 27,
+     "changes": 333,
+     "products": 31175,
+     "days": 5
+    },
+    {
+     "key": 28,
+     "changes": 129,
+     "products": 31241,
+     "days": 5
+    },
+    {
+     "key": 29,
+     "changes": 210,
+     "products": 25134,
+     "days": 4
+    },
+    {
+     "key": 30,
+     "changes": 164,
+     "products": 30868,
+     "days": 5
+    },
+    {
+     "key": 31,
+     "changes": 92,
+     "products": 18601,
+     "days": 3
+    }
+   ],
+   "by_weekday": [
+    {
+     "key": 0,
+     "changes": 584,
+     "products": 118237,
+     "days": 19
+    },
+    {
+     "key": 1,
+     "changes": 459,
+     "products": 112298,
+     "days": 18
+    },
+    {
+     "key": 2,
+     "changes": 1052,
+     "products": 117771,
+     "days": 20
+    },
+    {
+     "key": 3,
+     "changes": 1285,
+     "products": 123830,
+     "days": 21
+    },
+    {
+     "key": 4,
+     "changes": 779,
+     "products": 117416,
+     "days": 19
+    },
+    {
+     "key": 5,
+     "changes": 1035,
+     "products": 111767,
+     "days": 18
+    },
+    {
+     "key": 6,
+     "changes": 1226,
+     "products": 118382,
+     "days": 19
+    }
+   ],
+   "target": {
+    "days": 30,
+    "changes": 1225,
+    "persistence_abs_err_try": 27222.2
+   },
+   "other": {
+    "days": 104,
+    "changes": 5195,
+    "persistence_abs_err_try": 102654.55
+   }
+  },
+  {
+   "store": "Kale",
+   "days": 108,
+   "first": "2026-03-02",
+   "last": "2026-10-09",
+   "products_median": 3952,
+   "by_day_of_month": [
+    {
+     "key": 1,
+     "changes": 140,
+     "products": 11879,
+     "days": 3
+    },
+    {
+     "key": 2,
+     "changes": 99,
+     "products": 19923,
+     "days": 5
+    },
+    {
+     "key": 3,
+     "changes": 336,
+     "products": 20459,
+     "days": 5
+    },
+    {
+     "key": 4,
+     "changes": 100,
+     "products": 16280,
+     "days": 4
+    },
+    {
+     "key": 5,
+     "changes": 140,
+     "products": 11686,
+     "days": 4
+    },
+    {
+     "key": 6,
+     "changes": 69,
+     "products": 11910,
+     "days": 4
+    },
+    {
+     "key": 7,
+     "changes": 137,
+     "products": 11929,
+     "days": 3
+    },
+    {
+     "key": 8,
+     "changes": 42,
+     "products": 11891,
+     "days": 3
+    },
+    {
+     "key": 9,
+     "changes": 90,
+     "products": 16090,
+     "days": 4
+    },
+    {
+     "key": 10,
+     "changes": 94,
+     "products": 11935,
+     "days": 3
+    },
+    {
+     "key": 11,
+     "changes": 26,
+     "products": 11826,
+     "days": 3
+    },
+    {
+     "key": 12,
+     "changes": 64,
+     "products": 11838,
+     "days": 3
+    },
+    {
+     "key": 13,
+     "changes": 186,
+     "products": 11887,
+     "days": 3
+    },
+    {
+     "key": 14,
+     "changes": 115,
+     "products": 7950,
+     "days": 2
+    },
+    {
+     "key": 15,
+     "changes": 27,
+     "products": 8123,
+     "days": 2
+    },
+    {
+     "key": 16,
+     "changes": 70,
+     "products": 8154,
+     "days": 2
+    },
+    {
+     "key": 17,
+     "changes": 83,
+     "products": 16041,
+     "days": 4
+    },
+    {
+     "key": 18,
+     "changes": 71,
+     "products": 16284,
+     "days": 4
+    },
+    {
+     "key": 19,
+     "changes": 174,
+     "products": 16438,
+     "days": 4
+    },
+    {
+     "key": 20,
+     "changes": 154,
+     "products": 16373,
+     "days": 4
+    },
+    {
+     "key": 21,
+     "changes": 244,
+     "products": 16474,
+     "days": 4
+    },
+    {
+     "key": 22,
+     "changes": 90,
+     "products": 16031,
+     "days": 4
+    },
+    {
+     "key": 23,
+     "changes": 163,
+     "products": 15743,
+     "days": 4
+    },
+    {
+     "key": 24,
+     "changes": 183,
+     "products": 19705,
+     "days": 5
+    },
+    {
+     "key": 25,
+     "changes": 57,
+     "products": 15823,
+     "days": 4
+    },
+    {
+     "key": 26,
+     "changes": 47,
+     "products": 15755,
+     "days": 4
+    },
+    {
+     "key": 27,
+     "changes": 118,
+     "products": 11930,
+     "days": 3
+    },
+    {
+     "key": 28,
+     "changes": 24,
+     "products": 11645,
+     "days": 3
+    },
+    {
+     "key": 29,
+     "changes": 23,
+     "products": 10498,
+     "days": 3
+    },
+    {
+     "key": 30,
+     "changes": 82,
+     "products": 14664,
+     "days": 4
+    },
+    {
+     "key": 31,
+     "changes": 29,
+     "products": 4040,
+     "days": 1
+    }
+   ],
+   "by_weekday": [
+    {
+     "key": 0,
+     "changes": 138,
+     "products": 68273,
+     "days": 17
+    },
+    {
+     "key": 1,
+     "changes": 530,
+     "products": 64256,
+     "days": 16
+    },
+    {
+     "key": 2,
+     "changes": 575,
+     "products": 63484,
+     "days": 16
+    },
+    {
+     "key": 3,
+     "changes": 677,
+     "products": 67035,
+     "days": 17
+    },
+    {
+     "key": 4,
+     "changes": 884,
+     "products": 59643,
+     "days": 15
+    },
+    {
+     "key": 5,
+     "changes": 264,
+     "products": 47019,
+     "days": 13
+    },
+    {
+     "key": 6,
+     "changes": 209,
+     "products": 51494,
+     "days": 14
+    }
+   ],
+   "target": {
+    "days": 17,
+    "changes": 633,
+    "persistence_abs_err_try": 42005.28
+   },
+   "other": {
+    "days": 91,
+    "changes": 2644,
+    "persistence_abs_err_try": 54263.9
+   }
+  },
+  {
+   "store": "Kim",
+   "days": 117,
+   "first": "2026-02-26",
+   "last": "2026-10-09",
+   "products_median": 2282,
+   "by_day_of_month": [
+    {
+     "key": 1,
+     "changes": 744,
+     "products": 8968,
+     "days": 4
+    },
+    {
+     "key": 2,
+     "changes": 220,
+     "products": 8838,
+     "days": 4
+    },
+    {
+     "key": 3,
+     "changes": 108,
+     "products": 8734,
+     "days": 4
+    },
+    {
+     "key": 4,
+     "changes": 114,
+     "products": 8738,
+     "days": 4
+    },
+    {
+     "key": 5,
+     "changes": 149,
+     "products": 8721,
+     "days": 4
+    },
+    {
+     "key": 6,
+     "changes": 31,
+     "products": 8644,
+     "days": 4
+    },
+    {
+     "key": 7,
+     "changes": 85,
+     "products": 8474,
+     "days": 4
+    },
+    {
+     "key": 8,
+     "changes": 71,
+     "products": 8479,
+     "days": 4
+    },
+    {
+     "key": 9,
+     "changes": 154,
+     "products": 8524,
+     "days": 4
+    },
+    {
+     "key": 10,
+     "changes": 98,
+     "products": 6825,
+     "days": 3
+    },
+    {
+     "key": 11,
+     "changes": 152,
+     "products": 6859,
+     "days": 3
+    },
+    {
+     "key": 12,
+     "changes": 51,
+     "products": 6853,
+     "days": 3
+    },
+    {
+     "key": 13,
+     "changes": 120,
+     "products": 6806,
+     "days": 3
+    },
+    {
+     "key": 14,
+     "changes": 100,
+     "products": 6838,
+     "days": 3
+    },
+    {
+     "key": 15,
+     "changes": 119,
+     "products": 6870,
+     "days": 3
+    },
+    {
+     "key": 16,
+     "changes": 128,
+     "products": 9162,
+     "days": 4
+    },
+    {
+     "key": 17,
+     "changes": 59,
+     "products": 9162,
+     "days": 4
+    },
+    {
+     "key": 18,
+     "changes": 239,
+     "products": 9121,
+     "days": 4
+    },
+    {
+     "key": 19,
+     "changes": 66,
+     "products": 9149,
+     "days": 4
+    },
+    {
+     "key": 20,
+     "changes": 251,
+     "products": 9107,
+     "days": 4
+    },
+    {
+     "key": 21,
+     "changes": 79,
+     "products": 9169,
+     "days": 4
+    },
+    {
+     "key": 22,
+     "changes": 77,
+     "products": 9171,
+     "days": 4
+    },
+    {
+     "key": 23,
+     "changes": 80,
+     "products": 9198,
+     "days": 4
+    },
+    {
+     "key": 24,
+     "changes": 78,
+     "products": 11610,
+     "days": 5
+    },
+    {
+     "key": 25,
+     "changes": 85,
+     "products": 9439,
+     "days": 4
+    },
+    {
+     "key": 26,
+     "changes": 61,
+     "products": 11770,
+     "days": 5
+    },
+    {
+     "key": 27,
+     "changes": 35,
+     "products": 9214,
+     "days": 4
+    },
+    {
+     "key": 28,
+     "changes": 204,
+     "products": 9097,
+     "days": 4
+    },
+    {
+     "key": 29,
+     "changes": 69,
+     "products": 6913,
+     "days": 3
+    },
+    {
+     "key": 30,
+     "changes": 89,
+     "products": 9079,
+     "days": 4
+    },
+    {
+     "key": 31,
+     "changes": 52,
+     "products": 4627,
+     "days": 2
+    }
+   ],
+   "by_weekday": [
+    {
+     "key": 0,
+     "changes": 749,
+     "products": 38688,
+     "days": 17
+    },
+    {
+     "key": 1,
+     "changes": 552,
+     "products": 36142,
+     "days": 16
+    },
+    {
+     "key": 2,
+     "changes": 609,
+     "products": 35669,
+     "days": 16
+    },
+    {
+     "key": 3,
+     "changes": 887,
+     "products": 40222,
+     "days": 18
+    },
+    {
+     "key": 4,
+     "changes": 367,
+     "products": 37875,
+     "days": 17
+    },
+    {
+     "key": 5,
+     "changes": 560,
+     "products": 36550,
+     "days": 16
+    },
+    {
+     "key": 6,
+     "changes": 244,
+     "products": 39013,
+     "days": 17
+    }
+   ],
+   "target": {
+    "days": 22,
+    "changes": 1197,
+    "persistence_abs_err_try": 25643.02
+   },
+   "other": {
+    "days": 95,
+    "changes": 2771,
+    "persistence_abs_err_try": 72291.74
+   }
+  },
+  {
+   "store": "Macrocenter",
+   "days": 93,
+   "first": "2026-02-21",
+   "last": "2026-10-09",
+   "products_median": 7799,
+   "by_day_of_month": [
+    {
+     "key": 1,
+     "changes": 678,
+     "products": 20760,
+     "days": 3
+    },
+    {
+     "key": 2,
+     "changes": 288,
+     "products": 29260,
+     "days": 4
+    },
+    {
+     "key": 3,
+     "changes": 406,
+     "products": 21647,
+     "days": 3
+    },
+    {
+     "key": 4,
+     "changes": 71,
+     "products": 21225,
+     "days": 3
+    },
+    {
+     "key": 5,
+     "changes": 377,
+     "products": 28842,
+     "days": 4
+    },
+    {
+     "key": 6,
+     "changes": 103,
+     "products": 20798,
+     "days": 3
+    },
+    {
+     "key": 7,
+     "changes": 118,
+     "products": 21035,
+     "days": 3
+    },
+    {
+     "key": 8,
+     "changes": 379,
+     "products": 21503,
+     "days": 3
+    },
+    {
+     "key": 9,
+     "changes": 265,
+     "products": 21423,
+     "days": 3
+    },
+    {
+     "key": 10,
+     "changes": 73,
+     "products": 15896,
+     "days": 2
+    },
+    {
+     "key": 11,
+     "changes": 334,
+     "products": 15350,
+     "days": 2
+    },
+    {
+     "key": 12,
+     "changes": 189,
+     "products": 23702,
+     "days": 3
+    },
+    {
+     "key": 13,
+     "changes": 131,
+     "products": 15586,
+     "days": 2
+    },
+    {
+     "key": 14,
+     "changes": 72,
+     "products": 15856,
+     "days": 2
+    },
+    {
+     "key": 15,
+     "changes": 159,
+     "products": 23655,
+     "days": 3
+    },
+    {
+     "key": 16,
+     "changes": 304,
+     "products": 24158,
+     "days": 3
+    },
+    {
+     "key": 17,
+     "changes": 425,
+     "products": 23684,
+     "days": 3
+    },
+    {
+     "key": 18,
+     "changes": 24,
+     "products": 7637,
+     "days": 1
+    },
+    {
+     "key": 19,
+     "changes": 43,
+     "products": 7592,
+     "days": 1
+    },
+    {
+     "key": 20,
+     "changes": 462,
+     "products": 23311,
+     "days": 3
+    },
+    {
+     "key": 21,
+     "changes": 503,
+     "products": 31853,
+     "days": 4
+    },
+    {
+     "key": 22,
+     "changes": 175,
+     "products": 30903,
+     "days": 4
+    },
+    {
+     "key": 23,
+     "changes": 160,
+     "products": 30540,
+     "days": 4
+    },
+    {
+     "key": 24,
+     "changes": 286,
+     "products": 38025,
+     "days": 5
+    },
+    {
+     "key": 25,
+     "changes": 203,
+     "products": 31330,
+     "days": 4
+    },
+    {
+     "key": 26,
+     "changes": 194,
+     "products": 23170,
+     "days": 3
+    },
+    {
+     "key": 27,
+     "changes": 713,
+     "products": 23252,
+     "days": 3
+    },
+    {
+     "key": 28,
+     "changes": 264,
+     "products": 23084,
+     "days": 3
+    },
+    {
+     "key": 29,
+     "changes": 297,
+     "products": 23576,
+     "days": 3
+    },
+    {
+     "key": 30,
+     "changes": 168,
+     "products": 29664,
+     "days": 4
+    },
+    {
+     "key": 31,
+     "changes": 151,
+     "products": 15466,
+     "days": 2
+    }
+   ],
+   "by_weekday": [
+    {
+     "key": 0,
+     "changes": 1050,
+     "products": 105552,
+     "days": 14
+    },
+    {
+     "key": 1,
+     "changes": 972,
+     "products": 100329,
+     "days": 13
+    },
+    {
+     "key": 2,
+     "changes": 932,
+     "products": 105387,
+     "days": 14
+    },
+    {
+     "key": 3,
+     "changes": 2412,
+     "products": 103828,
+     "days": 14
+    },
+    {
+     "key": 4,
+     "changes": 1658,
+     "products": 89471,
+     "days": 12
+    },
+    {
+     "key": 5,
+     "changes": 878,
+     "products": 92326,
+     "days": 12
+    },
+    {
+     "key": 6,
+     "changes": 113,
+     "products": 106890,
+     "days": 14
+    }
+   ],
+   "target": {
+    "days": 16,
+    "changes": 1538,
+    "persistence_abs_err_try": 160001.85
+   },
+   "other": {
+    "days": 77,
+    "changes": 6477,
+    "persistence_abs_err_try": 910133.2
+   }
+  },
+  {
+   "store": "Marketzade",
+   "days": 144,
+   "first": "2026-02-25",
+   "last": "2026-10-09",
+   "products_median": 2724,
+   "by_day_of_month": [
+    {
+     "key": 1,
+     "changes": 63,
+     "products": 16415,
+     "days": 6
+    },
+    {
+     "key": 2,
+     "changes": 655,
+     "products": 16324,
+     "days": 6
+    },
+    {
+     "key": 3,
+     "changes": 2370,
+     "products": 16440,
+     "days": 6
+    },
+    {
+     "key": 4,
+     "changes": 0,
+     "products": 16448,
+     "days": 6
+    },
+    {
+     "key": 5,
+     "changes": 63,
+     "products": 16438,
+     "days": 6
+    },
+    {
+     "key": 6,
+     "changes": 546,
+     "products": 16293,
+     "days": 6
+    },
+    {
+     "key": 7,
+     "changes": 9,
+     "products": 16334,
+     "days": 6
+    },
+    {
+     "key": 8,
+     "changes": 29,
+     "products": 13527,
+     "days": 5
+    },
+    {
+     "key": 9,
+     "changes": 32,
+     "products": 13555,
+     "days": 5
+    },
+    {
+     "key": 10,
+     "changes": 495,
+     "products": 10764,
+     "days": 4
+    },
+    {
+     "key": 11,
+     "changes": 2,
+     "products": 8050,
+     "days": 3
+    },
+    {
+     "key": 12,
+     "changes": 378,
+     "products": 10817,
+     "days": 4
+    },
+    {
+     "key": 13,
+     "changes": 3,
+     "products": 10998,
+     "days": 4
+    },
+    {
+     "key": 14,
+     "changes": 5,
+     "products": 11089,
+     "days": 4
+    },
+    {
+     "key": 15,
+     "changes": 0,
+     "products": 9727,
+     "days": 4
+    },
+    {
+     "key": 16,
+     "changes": 1,
+     "products": 9727,
+     "days": 4
+    },
+    {
+     "key": 17,
+     "changes": 0,
+     "products": 10912,
+     "days": 4
+    },
+    {
+     "key": 18,
+     "changes": 37,
+     "products": 11045,
+     "days": 4
+    },
+    {
+     "key": 19,
+     "changes": 0,
+     "products": 11069,
+     "days": 4
+    },
+    {
+     "key": 20,
+     "changes": 0,
+     "products": 10233,
+     "days": 4
+    },
+    {
+     "key": 21,
+     "changes": 0,
+     "products": 10228,
+     "days": 4
+    },
+    {
+     "key": 22,
+     "changes": 0,
+     "products": 11067,
+     "days": 4
+    },
+    {
+     "key": 23,
+     "changes": 2098,
+     "products": 11007,
+     "days": 4
+    },
+    {
+     "key": 24,
+     "changes": 0,
+     "products": 13892,
+     "days": 5
+    },
+    {
+     "key": 25,
+     "changes": 0,
+     "products": 13720,
+     "days": 5
+    },
+    {
+     "key": 26,
+     "changes": 259,
+     "products": 13673,
+     "days": 5
+    },
+    {
+     "key": 27,
+     "changes": 2,
+     "products": 13721,
+     "days": 5
+    },
+    {
+     "key": 28,
+     "changes": 460,
+     "products": 13641,
+     "days": 5
+    },
+    {
+     "key": 29,
+     "changes": 0,
+     "products": 11079,
+     "days": 4
+    },
+    {
+     "key": 30,
+     "changes": 1,
+     "products": 13842,
+     "days": 5
+    },
+    {
+     "key": 31,
+     "changes": 0,
+     "products": 8374,
+     "days": 3
+    }
+   ],
+   "by_weekday": [
+    {
+     "key": 0,
+     "changes": 2606,
+     "products": 54798,
+     "days": 20
+    },
+    {
+     "key": 1,
+     "changes": 838,
+     "products": 51947,
+     "days": 19
+    },
+    {
+     "key": 2,
+     "changes": 564,
+     "products": 59528,
+     "days": 22
+    },
+    {
+     "key": 3,
+     "changes": 2468,
+     "products": 59559,
+     "days": 22
+    },
+    {
+     "key": 4,
+     "changes": 529,
+     "products": 56225,
+     "days": 21
+    },
+    {
+     "key": 5,
+     "changes": 503,
+     "products": 53567,
+     "days": 20
+    },
+    {
+     "key": 6,
+     "changes": 0,
+     "products": 54825,
+     "days": 20
+    }
+   ],
+   "target": {
+    "days": 30,
+    "changes": 69,
+    "persistence_abs_err_try": 5525.0
+   },
+   "other": {
+    "days": 114,
+    "changes": 7439,
+    "persistence_abs_err_try": 99028.3
+   }
+  },
+  {
+   "store": "Migros",
+   "days": 129,
+   "first": "2026-02-25",
+   "last": "2026-10-09",
+   "products_median": 11489,
+   "by_day_of_month": [
+    {
+     "key": 1,
+     "changes": 815,
+     "products": 39714,
+     "days": 5
+    },
+    {
+     "key": 2,
+     "changes": 302,
+     "products": 39982,
+     "days": 5
+    },
+    {
+     "key": 3,
+     "changes": 388,
+     "products": 40964,
+     "days": 5
+    },
+    {
+     "key": 4,
+     "changes": 276,
+     "products": 41412,
+     "days": 5
+    },
+    {
+     "key": 5,
+     "changes": 399,
+     "products": 41199,
+     "days": 5
+    },
+    {
+     "key": 6,
+     "changes": 299,
+     "products": 41759,
+     "days": 5
+    },
+    {
+     "key": 7,
+     "changes": 469,
+     "products": 40503,
+     "days": 5
+    },
+    {
+     "key": 8,
+     "changes": 149,
+     "products": 38277,
+     "days": 4
+    },
+    {
+     "key": 9,
+     "changes": 472,
+     "products": 39174,
+     "days": 4
+    },
+    {
+     "key": 10,
+     "changes": 208,
+     "products": 36233,
+     "days": 3
+    },
+    {
+     "key": 11,
+     "changes": 272,
+     "products": 35359,
+     "days": 3
+    },
+    {
+     "key": 12,
+     "changes": 1215,
+     "products": 37759,
+     "days": 4
+    },
+    {
+     "key": 13,
+     "changes": 814,
+     "products": 37242,
+     "days": 4
+    },
+    {
+     "key": 14,
+     "changes": 240,
+     "products": 37070,
+     "days": 4
+    },
+    {
+     "key": 15,
+     "changes": 297,
+     "products": 37130,
+     "days": 4
+    },
+    {
+     "key": 16,
+     "changes": 668,
+     "products": 37473,
+     "days": 4
+    },
+    {
+     "key": 17,
+     "changes": 130,
+     "products": 36985,
+     "days": 4
+    },
+    {
+     "key": 18,
+     "changes": 270,
+     "products": 35474,
+     "days": 4
+    },
+    {
+     "key": 19,
+     "changes": 400,
+     "products": 35924,
+     "days": 4
+    },
+    {
+     "key": 20,
+     "changes": 809,
+     "products": 36282,
+     "days": 4
+    },
+    {
+     "key": 21,
+     "changes": 380,
+     "products": 36342,
+     "days": 4
+    },
+    {
+     "key": 22,
+     "changes": 174,
+     "products": 36339,
+     "days": 4
+    },
+    {
+     "key": 23,
+     "changes": 309,
+     "products": 36201,
+     "days": 4
+    },
+    {
+     "key": 24,
+     "changes": 720,
+     "products": 39652,
+     "days": 5
+    },
+    {
+     "key": 25,
+     "changes": 526,
+     "products": 47713,
+     "days": 5
+    },
+    {
+     "key": 26,
+     "changes": 2187,
+     "products": 47860,
+     "days": 5
+    },
+    {
+     "key": 27,
+     "changes": 236,
+     "products": 37884,
+     "days": 4
+    },
+    {
+     "key": 28,
+     "changes": 476,
+     "products": 37784,
+     "days": 4
+    },
+    {
+     "key": 29,
+     "changes": 109,
+     "products": 26334,
+     "days": 3
+    },
+    {
+     "key": 30,
+     "changes": 987,
+     "products": 28401,
+     "days": 4
+    },
+    {
+     "key": 31,
+     "changes": 277,
+     "products": 14404,
+     "days": 2
+    }
+   ],
+   "by_weekday": [
+    {
+     "key": 0,
+     "changes": 1500,
+     "products": 162062,
+     "days": 18
+    },
+    {
+     "key": 1,
+     "changes": 1413,
+     "products": 160155,
+     "days": 17
+    },
+    {
+     "key": 2,
+     "changes": 1616,
+     "products": 166835,
+     "days": 19
+    },
+    {
+     "key": 3,
+     "changes": 6847,
+     "products": 168973,
+     "days": 20
+    },
+    {
+     "key": 4,
+     "changes": 1871,
+     "products": 167761,
+     "days": 19
+    },
+    {
+     "key": 5,
+     "changes": 1100,
+     "products": 164485,
+     "days": 18
+    },
+    {
+     "key": 6,
+     "changes": 926,
+     "products": 164558,
+     "days": 18
+    }
+   ],
+   "target": {
+    "days": 25,
+    "changes": 2521,
+    "persistence_abs_err_try": 391769.41
+   },
+   "other": {
+    "days": 104,
+    "changes": 12752,
+    "persistence_abs_err_try": 1374860.7
+   }
+  },
+  {
+   "store": "Mopas",
+   "days": 36,
+   "first": "2026-03-03",
+   "last": "2026-10-09",
+   "products_median": 5487,
+   "by_day_of_month": [
+    {
+     "key": 1,
+     "changes": 256,
+     "products": 10972,
+     "days": 2
+    },
+    {
+     "key": 2,
+     "changes": 375,
+     "products": 10942,
+     "days": 2
+    },
+    {
+     "key": 3,
+     "changes": 312,
+     "products": 16038,
+     "days": 3
+    },
+    {
+     "key": 4,
+     "changes": 245,
+     "products": 15941,
+     "days": 3
+    },
+    {
+     "key": 5,
+     "changes": 219,
+     "products": 15699,
+     "days": 3
+    },
+    {
+     "key": 6,
+     "changes": 25,
+     "products": 10587,
+     "days": 2
+    },
+    {
+     "key": 7,
+     "changes": 485,
+     "products": 10438,
+     "days": 2
+    },
+    {
+     "key": 8,
+     "changes": 61,
+     "products": 4987,
+     "days": 1
+    },
+    {
+     "key": 9,
+     "changes": 11,
+     "products": 4988,
+     "days": 1
+    },
+    {
+     "key": 17,
+     "changes": 0,
+     "products": 5414,
+     "days": 1
+    },
+    {
+     "key": 18,
+     "changes": 97,
+     "products": 5340,
+     "days": 1
+    },
+    {
+     "key": 19,
+     "changes": 87,
+     "products": 5442,
+     "days": 1
+    },
+    {
+     "key": 20,
+     "changes": 92,
+     "products": 5531,
+     "days": 1
+    },
+    {
+     "key": 21,
+     "changes": 49,
+     "products": 5517,
+     "days": 1
+    },
+    {
+     "key": 22,
+     "changes": 72,
+     "products": 5625,
+     "days": 1
+    },
+    {
+     "key": 23,
+     "changes": 7,
+     "products": 5616,
+     "days": 1
+    },
+    {
+     "key": 24,
+     "changes": 71,
+     "products": 11153,
+     "days": 2
+    },
+    {
+     "key": 25,
+     "changes": 43,
+     "products": 5535,
+     "days": 1
+    },
+    {
+     "key": 26,
+     "changes": 69,
+     "products": 5505,
+     "days": 1
+    },
+    {
+     "key": 27,
+     "changes": 1,
+     "products": 5549,
+     "days": 1
+    },
+    {
+     "key": 28,
+     "changes": 130,
+     "products": 5584,
+     "days": 1
+    },
+    {
+     "key": 29,
+     "changes": 314,
+     "products": 5622,
+     "days": 1
+    },
+    {
+     "key": 30,
+     "changes": 327,
+     "products": 11118,
+     "days": 2
+    },
+    {
+     "key": 31,
+     "changes": 2,
+     "products": 5545,
+     "days": 1
+    }
+   ],
+   "by_weekday": [
+    {
+     "key": 0,
+     "changes": 174,
+     "products": 27191,
+     "days": 5
+    },
+    {
+     "key": 1,
+     "changes": 563,
+     "products": 26688,
+     "days": 5
+    },
+    {
+     "key": 2,
+     "changes": 729,
+     "products": 32107,
+     "days": 6
+    },
+    {
+     "key": 3,
+     "changes": 479,
+     "products": 37787,
+     "days": 7
+    },
+    {
+     "key": 4,
+     "changes": 571,
+     "products": 26999,
+     "days": 5
+    },
+    {
+     "key": 5,
+     "changes": 493,
+     "products": 22006,
+     "days": 4
+    },
+    {
+     "key": 6,
+     "changes": 341,
+     "products": 21910,
+     "days": 4
+    }
+   ],
+   "target": {
+    "days": 3,
+    "changes": 518,
+    "persistence_abs_err_try": 19096.37
+   },
+   "other": {
+    "days": 33,
+    "changes": 2832,
+    "persistence_abs_err_try": 98673.47
+   }
+  },
+  {
+   "store": "Tarım Kredi Kooperatif",
+   "days": 42,
+   "first": "2026-03-02",
+   "last": "2026-10-09",
+   "products_median": 2610,
+   "by_day_of_month": [
+    {
+     "key": 1,
+     "changes": 25,
+     "products": 4954,
+     "days": 2
+    },
+    {
+     "key": 2,
+     "changes": 231,
+     "products": 8662,
+     "days": 3
+    },
+    {
+     "key": 3,
+     "changes": 220,
+     "products": 8646,
+     "days": 3
+    },
+    {
+     "key": 4,
+     "changes": 96,
+     "products": 8615,
+     "days": 3
+    },
+    {
+     "key": 5,
+     "changes": 95,
+     "products": 8611,
+     "days": 3
+    },
+    {
+     "key": 6,
+     "changes": 88,
+     "products": 8583,
+     "days": 3
+    },
+    {
+     "key": 7,
+     "changes": 44,
+     "products": 8506,
+     "days": 3
+    },
+    {
+     "key": 8,
+     "changes": 6,
+     "products": 2480,
+     "days": 1
+    },
+    {
+     "key": 9,
+     "changes": 31,
+     "products": 2473,
+     "days": 1
+    },
+    {
+     "key": 14,
+     "changes": 0,
+     "products": 2539,
+     "days": 1
+    },
+    {
+     "key": 15,
+     "changes": 33,
+     "products": 2539,
+     "days": 1
+    },
+    {
+     "key": 16,
+     "changes": 0,
+     "products": 2539,
+     "days": 1
+    },
+    {
+     "key": 17,
+     "changes": 0,
+     "products": 2539,
+     "days": 1
+    },
+    {
+     "key": 18,
+     "changes": 8,
+     "products": 2539,
+     "days": 1
+    },
+    {
+     "key": 19,
+     "changes": 104,
+     "products": 2552,
+     "days": 1
+    },
+    {
+     "key": 20,
+     "changes": 33,
+     "products": 2554,
+     "days": 1
+    },
+    {
+     "key": 21,
+     "changes": 10,
+     "products": 2554,
+     "days": 1
+    },
+    {
+     "key": 22,
+     "changes": 13,
+     "products": 2555,
+     "days": 1
+    },
+    {
+     "key": 23,
+     "changes": 12,
+     "products": 2555,
+     "days": 1
+    },
+    {
+     "key": 24,
+     "changes": 90,
+     "products": 5202,
+     "days": 2
+    },
+    {
+     "key": 25,
+     "changes": 15,
+     "products": 2555,
+     "days": 1
+    },
+    {
+     "key": 26,
+     "changes": 46,
+     "products": 2617,
+     "days": 1
+    },
+    {
+     "key": 27,
+     "changes": 16,
+     "products": 2617,
+     "days": 1
+    },
+    {
+     "key": 28,
+     "changes": 90,
+     "products": 2620,
+     "days": 1
+    },
+    {
+     "key": 29,
+     "changes": 35,
+     "products": 2620,
+     "days": 1
+    },
+    {
+     "key": 30,
+     "changes": 44,
+     "products": 5256,
+     "days": 2
+    },
+    {
+     "key": 31,
+     "changes": 4,
+     "products": 2313,
+     "days": 1
+    }
+   ],
+   "by_weekday": [
+    {
+     "key": 0,
+     "changes": 21,
+     "products": 16050,
+     "days": 6
+    },
+    {
+     "key": 1,
+     "changes": 238,
+     "products": 13393,
+     "days": 5
+    },
+    {
+     "key": 2,
+     "changes": 437,
+     "products": 16317,
+     "days": 6
+    },
+    {
+     "key": 3,
+     "changes": 187,
+     "products": 18960,
+     "days": 7
+    },
+    {
+     "key": 4,
+     "changes": 279,
+     "products": 18784,
+     "days": 7
+    },
+    {
+     "key": 5,
+     "changes": 151,
+     "products": 16339,
+     "days": 6
+    },
+    {
+     "key": 6,
+     "changes": 76,
+     "products": 12952,
+     "days": 5
+    }
+   ],
+   "target": {
+    "days": 6,
+    "changes": 59,
+    "persistence_abs_err_try": 2842.7
+   },
+   "other": {
+    "days": 36,
+    "changes": 1330,
+    "persistence_abs_err_try": 29090.32
+   }
+  },
+  {
+   "store": "sehzade",
+   "days": 39,
+   "first": "2026-03-05",
+   "last": "2026-10-09",
+   "products_median": 6325,
+   "by_day_of_month": [
+    {
+     "key": 1,
+     "changes": 45,
+     "products": 6459,
+     "days": 1
+    },
+    {
+     "key": 2,
+     "changes": 619,
+     "products": 12687,
+     "days": 2
+    },
+    {
+     "key": 3,
+     "changes": 44,
+     "products": 12677,
+     "days": 2
+    },
+    {
+     "key": 4,
+     "changes": 190,
+     "products": 8124,
+     "days": 2
+    },
+    {
+     "key": 5,
+     "changes": 76,
+     "products": 19526,
+     "days": 3
+    },
+    {
+     "key": 6,
+     "changes": 68,
+     "products": 19428,
+     "days": 3
+    },
+    {
+     "key": 7,
+     "changes": 71,
+     "products": 12676,
+     "days": 2
+    },
+    {
+     "key": 8,
+     "changes": 123,
+     "products": 6361,
+     "days": 1
+    },
+    {
+     "key": 9,
+     "changes": 25,
+     "products": 6328,
+     "days": 1
+    },
+    {
+     "key": 12,
+     "changes": 190,
+     "products": 12882,
+     "days": 2
+    },
+    {
+     "key": 13,
+     "changes": 12,
+     "products": 6284,
+     "days": 1
+    },
+    {
+     "key": 14,
+     "changes": 35,
+     "products": 6250,
+     "days": 1
+    },
+    {
+     "key": 15,
+     "changes": 71,
+     "products": 6252,
+     "days": 1
+    },
+    {
+     "key": 16,
+     "changes": 0,
+     "products": 6365,
+     "days": 1
+    },
+    {
+     "key": 17,
+     "changes": 2,
+     "products": 6271,
+     "days": 1
+    },
+    {
+     "key": 18,
+     "changes": 109,
+     "products": 6236,
+     "days": 1
+    },
+    {
+     "key": 19,
+     "changes": 37,
+     "products": 6217,
+     "days": 1
+    },
+    {
+     "key": 20,
+     "changes": 36,
+     "products": 6248,
+     "days": 1
+    },
+    {
+     "key": 21,
+     "changes": 82,
+     "products": 6233,
+     "days": 1
+    },
+    {
+     "key": 22,
+     "changes": 58,
+     "products": 6265,
+     "days": 1
+    },
+    {
+     "key": 23,
+     "changes": 50,
+     "products": 6233,
+     "days": 1
+    },
+    {
+     "key": 24,
+     "changes": 140,
+     "products": 12660,
+     "days": 2
+    },
+    {
+     "key": 25,
+     "changes": 45,
+     "products": 6219,
+     "days": 1
+    },
+    {
+     "key": 26,
+     "changes": 145,
+     "products": 6205,
+     "days": 1
+    },
+    {
+     "key": 27,
+     "changes": 203,
+     "products": 6303,
+     "days": 1
+    },
+    {
+     "key": 28,
+     "changes": 12,
+     "products": 6336,
+     "days": 1
+    },
+    {
+     "key": 29,
+     "changes": 23,
+     "products": 6334,
+     "days": 1
+    },
+    {
+     "key": 30,
+     "changes": 53,
+     "products": 12801,
+     "days": 2
+    }
+   ],
+   "by_weekday": [
+    {
+     "key": 0,
+     "changes": 3,
+     "products": 25435,
+     "days": 4
+    },
+    {
+     "key": 1,
+     "changes": 156,
+     "products": 18924,
+     "days": 3
+    },
+    {
+     "key": 2,
+     "changes": 645,
+     "products": 37817,
+     "days": 6
+    },
+    {
+     "key": 3,
+     "changes": 659,
+     "products": 57565,
+     "days": 9
+    },
+    {
+     "key": 4,
+     "changes": 763,
+     "products": 44468,
+     "days": 7
+    },
+    {
+     "key": 5,
+     "changes": 256,
+     "products": 31596,
+     "days": 5
+    },
+    {
+     "key": 6,
+     "changes": 82,
+     "products": 27055,
+     "days": 5
+    }
+   ],
+   "target": {
+    "days": 5,
+    "changes": 155,
+    "persistence_abs_err_try": 3819.95
+   },
+   "other": {
+    "days": 34,
+    "changes": 2409,
+    "persistence_abs_err_try": 211572.1
+   }
+  }
+ ]
+}

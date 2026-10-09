@@ -65,7 +65,7 @@ def fold(text) -> str:
 def _read(path: Path) -> pd.DataFrame | None:
     try:
         df = pd.read_csv(path, encoding="utf-8-sig", sep=None, engine="python", dtype=str, on_bad_lines="skip")
-    except (pd.errors.ParserError, pd.errors.EmptyDataError, csv.Error):
+    except (pd.errors.ParserError, pd.errors.EmptyDataError, csv.Error, ValueError):  # ValueError: sok_market, sniffer fails
         return None
     name = next((c for c in NAME_COLS if c in df.columns), None)
     price = next((c for c in PRICE_COLS if c in df.columns), None)

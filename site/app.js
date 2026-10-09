@@ -46,6 +46,20 @@ const I18N = {
     td_total: 'Toplam',
     td_note: 'Değişim: normal fiyatın (kampanyalar ayıklanmış) bir önceki güne göre %0,5\'ten fazla oynaması; iki günün de gözlenmiş olması gerekir. Haziran–Temmuz ile Mayıs ve Ağustos\'un bir kısmı scraper kesintisinde kalıyor. 1 Mayıs, 30 Nisan\'da veri olmadığı için sayılamadı. "–": o gün veri yok. Grafikte bayramlar "diğer günler" içinde.',
     td_why: 'Bu neden işe yarıyor? Diğer günlerde fiyat neredeyse hiç değişmiyor. Orada "dünün fiyatı" zaten neredeyse kusursuz; model tahmin yapsa ancak gereksiz değişimler öngörüp hata ekleyebilir. Hedef günlerde değişim olasılığı birkaç kat yüksek, bu yüzden modelin "yarın fiyat değişir" sinyali eşiği geçebiliyor. Tahmini bu günlere sınırlamak modeli en çok işe yaradığı yerde kullanmak demek. Ay sonunu da içeren ilk gün kümesine göre MAE iyileşmesi B2\'de %18,9\'dan %23,7\'ye, B3\'te −%50,8\'den +%7,3\'e çıktı.',
+    st_h: 'Diğer marketlerde de bu günler mi?',
+    st_p: 'Aynı sayım, veri deposundaki diğer marketler için. Hedef günler burada da Gürmar kuralı (ayın 1, 14, 15, 16\'sı ve bayramlar), böylece kuralın başka bir markette ne kadar tuttuğu görülüyor. Bir market seçin. Haftalık broşür yapan zincirlerde fiyatlar ayın gününe değil haftanın gününe bağlı olabilir; ikinci grafik ve tablo, fiyat değişimlerinin haftanın hangi gününe ne kadar düştüğünü gösteriyor.',
+    st_pick: 'Market',
+    st_meta: (s) => `${s.days} gün veri (${s.first} – ${s.last}), günde ortalama ${s.products_median.toLocaleString('tr-TR')} ürün karşılaştırılabildi.`,
+    st_chart_dow: 'Fiyat değişimlerinin haftanın günlerine dağılımı (%)',
+    st_dow_changes: 'Değişimlerin payı', st_dow_days: 'Günlerin payı',
+    st_dow_rate: (r) => `O gün ürünlerin ortalama %${r}'inin fiyatı değişti`,
+    st_dow_note: 'Mavi çubuklar toplanınca %100: tüm fiyat değişimlerinin yüzde kaçı o güne düştü. Gri çubuk, o günün verideki günlere oranı; değişimler günlere eşit dağılsaydı mavi gri kadar olurdu. Ayın günü grafiğindeki oran başka bir ölçü: o gün ürünlerin yüzde kaçının fiyatı değişti. Örneğin bir markette Cumartesi oranı %2 ise, ortalama bir Cumartesi ürünlerin %2\'sinin fiyatı değişiyor; bu oranlar haftanın yedi günü için toplanınca haftada ürünlerin yaklaşık yüzde kaçının fiyat değiştirdiği çıkar.',
+    st_dow_table_h: 'Tüm marketler: fiyat değişimlerinin haftanın günlerine dağılımı',
+    st_dow_top2: 'En yoğun iki gün',
+    weekdays: ['Pzt', 'Sal', 'Çar', 'Per', 'Cum', 'Cmt', 'Paz'],
+    st_table_h: 'Tüm marketler: Gürmar kuralı ne kadar yakalıyor?',
+    st_cols: ['Market', 'Gün', 'Hedef günlerin payı', 'Değişimlerin payı', 'Hatanın (TL) payı', 'Kat', 'Değişim/gün: hedef / diğer', 'En çok değişen ayın günü', 'En çok değişen hafta günü'],
+    st_note: 'Değişim tanımı yukarıdakiyle aynı. Kat = değişimlerin payı ÷ hedef günlerin payı; 1 civarı, kuralın o markette rastgele gün seçmekten farksız olduğu anlamına gelir. Ürünler burada adla eşleştirildi (çoğu markette ürün kimliği yok), bu yüzden Gürmar rakamları yukarıdakilerden biraz farklı. Yalnızca en az 30 karşılaştırılabilir günü olan marketler var. Ayın her günü market başına yalnızca birkaç kez gözlendiği için tek günlük zirveler (ör. tek seferlik toplu zam) gürültülü olabilir. Tablolarda satıra tıklayınca market seçilir.',
     method_h: 'Nasıl çalışıyor?',
     method: [
       ['Hedef', 'Ertesi günün normal fiyatı. Kampanya indirimleri ayıklanır: bir fiyat düşüşü 21 güne kadar kampanya sayılır, sonra yeni normal fiyat olur.'],
@@ -179,6 +193,20 @@ const I18N = {
     td_total: 'Total',
     td_note: 'Change: the regular price (sales filtered out) moved by more than 0.5 % from the previous day; both days must be observed. June–July and parts of May and August fall in the scraper outage. May 1 could not be counted because April 30 has no data. "–": no data that day. In the chart, holidays are part of "other days".',
     td_why: 'Why does this work? On other days prices hardly ever change. There, "yesterday\'s price" is already almost perfect; a model forecasting there could only add error by predicting changes that do not happen. On target days a change is several times more likely, so the model\'s "price changes tomorrow" signal can clear its threshold. Restricting forecasts to these days uses the model where it helps most. Compared with the first day set, which included month end, the MAE gain went from 18.9 % to 23.7 % in B2 and from −50.8 % to +7.3 % in B3.',
+    st_h: 'Do other supermarkets change prices on the same days?',
+    st_p: 'The same count for the other supermarkets in the data repository. Target days are still the Gürmar rule (1st, 14th, 15th, 16th of the month and holidays), so you can see how well the rule carries over to another chain. Pick a supermarket. Chains with weekly flyers may change prices by day of week rather than day of month; the second chart and table show how much of all price changes fall on each weekday.',
+    st_pick: 'Supermarket',
+    st_meta: (s) => `${s.days} days of data (${s.first} – ${s.last}), ${s.products_median.toLocaleString('en-US')} comparable products per day (median).`,
+    st_chart_dow: 'How price changes spread over the week (%)',
+    st_dow_changes: 'Share of changes', st_dow_days: 'Share of days',
+    st_dow_rate: (r) => `On that day ${r} % of products changed price on average`,
+    st_dow_note: 'The blue bars add up to 100 %: the share of all price changes that fell on that weekday. The grey bar is that weekday\'s share of the observed days; if changes were spread evenly, blue would match grey. The rate in the day-of-month chart is a different measure: the share of products whose price changed that day. If a chain\'s Saturday rate is 2 %, then on an average Saturday 2 % of its products change price; adding the seven weekday rates gives roughly the share of products that change price in a week.',
+    st_dow_table_h: 'All supermarkets: how price changes spread over the week',
+    st_dow_top2: 'Two busiest days',
+    weekdays: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
+    st_table_h: 'All supermarkets: how much does the Gürmar rule catch?',
+    st_cols: ['Supermarket', 'Days', 'Share of target days', 'Share of changes', 'Share of error (TRY)', 'Lift', 'Changes/day: target / other', 'Top day of month', 'Top weekday'],
+    st_note: 'Same change definition as above. Lift = share of changes ÷ share of target days; around 1 means the rule does no better than picking days at random for that chain. Products are matched by name here (most chains have no product ID), so the Gürmar figures differ slightly from the ones above. Only supermarkets with at least 30 comparable days are shown. Each day of month is seen only a few times per chain, so single-day peaks (e.g. a one-off price hike across the store) can be noise. Click a row in either table to select that supermarket.',
     method_h: 'How it works',
     method: [
       ['Target', 'Tomorrow\'s regular price. Sales are filtered out: a price drop counts as a sale for up to 21 days, then becomes the new regular price.'],
@@ -280,6 +308,7 @@ const store = {
 let lang = store.get('lang') || ((navigator.language || '').toLowerCase().startsWith('tr') ? 'tr' : 'en');
 let summary = null, products = null, dates = null, selected = null;
 let metricCharts = [], productChart = null, domChart = null;
+let markets = null, market = null, stDomChart = null, stDowChart = null;
 
 const $ = (s) => document.querySelector(s);
 const t = (k) => I18N[lang][k];
@@ -356,17 +385,23 @@ function renderTiles() {
 
 // ── target days: how often prices change on the days the model forecasts ───
 
-const share = (x) => (lang === 'tr' ? `%${fmt(100 * x, 0)}` : `${fmt(100 * x, 0)} %`);
+const share = (x) => (!Number.isFinite(x) ? '–' : lang === 'tr' ? `%${fmt(100 * x, 0)}` : `${fmt(100 * x, 0)} %`);
+const perDay = (n, d) => (d ? fmt(n / d, 0) : '–');
+
+// target-day vs. other-day totals ({target, other}: {days, changes, persistence_abs_err_try}) -> tile values
+function ruleStats(c) {
+  const err = (k) => c[k].persistence_abs_err_try;
+  const days = c.target.days / (c.target.days + c.other.days), changes = c.target.changes / (c.target.changes + c.other.changes);
+  return { days, changes, err: err('target') / (err('target') + err('other')), lift: changes / days,
+           avg: `${perDay(c.target.changes, c.target.days)} <small>/ ${perDay(c.other.changes, c.other.days)}</small>` };
+}
+
+const ruleTiles = (s) => [[share(s.days), 'td_k_days'], [share(s.changes), 'td_k_changes'], [s.avg, 'td_k_avg'], [share(s.err), 'td_k_err']]
+  .map(([v, k]) => `<div class="card"><div class="tile-v">${v}</div><p class="hint">${t(k)}</p></div>`).join('');
 
 function renderTargetDays() {
   const c = summary.calendar;
-  const all = c.target.changes + c.other.changes;
-  $('#td-tiles').innerHTML = [
-    [share(c.target.days / (c.target.days + c.other.days)), 'td_k_days'],
-    [share(c.target.changes / all), 'td_k_changes'],
-    [`${fmt(c.target.changes / c.target.days, 0)} <small>/ ${fmt(c.other.changes / c.other.days, 0)}</small>`, 'td_k_avg'],
-    [share(c.target.persistence_abs_err_try / (c.target.persistence_abs_err_try + c.other.persistence_abs_err_try)), 'td_k_err'],
-  ].map(([v, k]) => `<div class="card"><div class="tile-v">${v}</div><p class="hint">${t(k)}</p></div>`).join('');
+  $('#td-tiles').innerHTML = ruleTiles(ruleStats(c));
 
   const kinds = ['1', '14', '15', '16', 'holiday'];
   const cell = (v, cls = '') => `<td${cls ? ` class="${cls}"` : ''}>${v == null ? '–' : fmt(v, 0)}</td>`;
@@ -381,33 +416,122 @@ function renderTargetDays() {
   $('#td-table').innerHTML = `<thead><tr>${t('td_cols').map((h, i) => `<th${i ? '' : ' class="l"'}>${h}</th>`).join('')}</tr></thead><tbody>${rows.join('')}</tbody>`;
 }
 
-function renderDomChart() {
-  const c = summary.calendar, isTarget = (d) => [1, 14, 15, 16].includes(d);
-  const rate = (d) => 100 * d.changes / d.products;
-  domChart?.destroy();
-  const canvas = $('#chart-dom');
-  canvas.ariaLabel = `${t('td_chart')}: ` + c.by_day_of_month.map((d) => `${d.day}: ${fmt(rate(d), 1)}`).join(', ');
-  domChart = new Chart(canvas, {
+const isTarget = (d) => [1, 14, 15, 16].includes(d);
+const rate = (d) => 100 * d.changes / d.products;
+
+const barOptions = (title, tooltip) => ({
+  maintainAspectRatio: false,
+  interaction: { mode: 'index', intersect: false },
+  plugins: {
+    title: { display: true, text: title, align: 'start', color: css('--text'), font: { size: 14, weight: '600' } },
+    legend: { position: 'top', align: 'start', labels: { boxWidth: 12, boxHeight: 12 } },
+    tooltip,
+  },
+  scales: { x: { grid: { display: false } }, y: { beginAtZero: true, grid: { color: css('--border') } } },
+});
+const barStyle = (ds) => ({ ...ds, borderRadius: 3, borderSkipped: 'bottom' });
+
+// bars of change rate (%); items: [{label, rate, target}], target days blue
+function rateChart(canvas, items, title) {
+  canvas.ariaLabel = `${title}: ` + items.map((d) => `${d.label}: ${fmt(d.rate, 1)}`).join(', ');
+  return new Chart(canvas, {
     type: 'bar',
     data: {
-      labels: c.by_day_of_month.map((d) => d.day),
+      labels: items.map((d) => d.label),
       datasets: [
-        { label: t('td_target'), data: c.by_day_of_month.map((d) => (isTarget(d.day) ? rate(d) : null)), backgroundColor: css('--series-1') },
-        { label: t('td_other'), data: c.by_day_of_month.map((d) => (isTarget(d.day) ? null : rate(d))), backgroundColor: css('--neutral') },
-      ].map((ds) => ({ ...ds, grouped: false, borderRadius: 3, borderSkipped: 'bottom' })),
+        { label: t('td_target'), data: items.map((d) => (d.target ? d.rate : null)), backgroundColor: css('--series-1') },
+        { label: t('td_other'), data: items.map((d) => (d.target ? null : d.rate)), backgroundColor: css('--neutral') },
+      ].map((ds) => barStyle({ ...ds, grouped: false })),
     },
-    options: {
-      maintainAspectRatio: false,
-      interaction: { mode: 'index', intersect: false },
-      plugins: {
-        title: { display: true, text: t('td_chart'), align: 'start', color: css('--text'), font: { size: 14, weight: '600' } },
-        legend: { position: 'top', align: 'start', labels: { boxWidth: 12, boxHeight: 12 } },
-        tooltip: { filter: (x) => x.parsed.y != null, callbacks: { label: (x) => `${x.dataset.label}: ${fmt(x.parsed.y, 2)} %` } },
-      },
-      scales: { x: { grid: { display: false } }, y: { beginAtZero: true, grid: { color: css('--border') } } },
-    },
+    options: barOptions(title, { filter: (x) => x.parsed.y != null, callbacks: { label: (x) => `${x.dataset.label}: ${fmt(x.parsed.y, 2)} %` } }),
   });
 }
+
+// per weekday: share of all changes vs. share of observed days (each sums to 100), rate in the tooltip
+function weekdayShares(m) {
+  const rows = m.by_weekday, C = rows.reduce((s, d) => s + d.changes, 0), D = rows.reduce((s, d) => s + d.days, 0);
+  return rows.map((d) => ({ key: d.key, label: t('weekdays')[d.key], changes: 100 * d.changes / C, days: 100 * d.days / D, rate: rate(d) }));
+}
+
+function weekdayChart(canvas, items, title) {
+  canvas.ariaLabel = `${title}: ` + items.map((d) => `${d.label}: ${fmt(d.changes, 0)} / ${fmt(d.days, 0)}`).join(', ');
+  return new Chart(canvas, {
+    type: 'bar',
+    data: {
+      labels: items.map((d) => d.label),
+      datasets: [
+        { label: t('st_dow_changes'), data: items.map((d) => d.changes), backgroundColor: css('--series-1') },
+        { label: t('st_dow_days'), data: items.map((d) => d.days), backgroundColor: css('--neutral') },
+      ].map(barStyle),
+    },
+    options: barOptions(title, { callbacks: {
+      label: (x) => `${x.dataset.label}: ${fmt(x.parsed.y, 1)} %`,
+      footer: (xs) => t('st_dow_rate')(fmt(items[xs[0].dataIndex].rate, 2)),
+    } }),
+  });
+}
+
+function renderDomChart() {
+  domChart?.destroy();
+  domChart = rateChart($('#chart-dom'), summary.calendar.by_day_of_month.map((d) => ({ label: d.day, rate: rate(d), target: isTarget(d.day) })), t('td_chart'));
+}
+
+// ── other supermarkets: the same count under the Gürmar rule ───────────────
+
+const marketName = (s) => ({ Gurmar: 'Gürmar' }[s] || s.charAt(0).toUpperCase() + s.slice(1));
+const topKey = (rows) => rows.reduce((a, b) => (rate(b) > rate(a) ? b : a)).key;
+
+function renderStores() {
+  if (!markets) { $('#stores').hidden = true; return; }
+  const sel = $('#store-select');
+  sel.innerHTML = markets.map((m) => `<option value="${esc(m.store)}"${m === market ? ' selected' : ''}>${esc(marketName(m.store))}</option>`).join('');
+  const rows = markets.map((m) => {
+    const s = ruleStats(m);
+    return `<tr data-store="${esc(m.store)}"${m === market ? ' class="model"' : ''}><td class="l">${esc(marketName(m.store))}</td><td>${fmt(m.days, 0)}</td>
+      <td>${share(s.days)}</td><td>${share(s.changes)}</td><td>${share(s.err)}</td><td>${fmt(s.lift, 1)}</td><td>${s.avg}</td>
+      <td>${topKey(m.by_day_of_month)}</td><td>${t('weekdays')[topKey(m.by_weekday)]}</td></tr>`;
+  });
+  $('#st-table').innerHTML = `<thead><tr>${t('st_cols').map((h, i) => `<th${i ? '' : ' class="l"'}>${h}</th>`).join('')}</tr></thead><tbody>${rows.join('')}</tbody>`;
+  $('#st-meta').textContent = t('st_meta')(market);
+  $('#st-tiles').innerHTML = ruleTiles(ruleStats(market));
+
+  // weekday shares per store: cell shade grows with the share; the two busiest weekdays are bold
+  const dowRows = markets.map((m) => {
+    const w = weekdayShares(m), byKey = Object.fromEntries(w.map((d) => [d.key, d]));
+    const top2 = [...w].sort((a, b) => b.changes - a.changes).slice(0, 2);
+    const cells = [0, 1, 2, 3, 4, 5, 6].map((k) => {
+      const d = byKey[k];
+      if (!d) return '<td>–</td>';
+      const bold = top2.includes(d) ? ' class="hi"' : '';
+      return `<td${bold} style="background: color-mix(in srgb, var(--series-1) ${Math.min(60, Math.round(d.changes * 1.2))}%, transparent)">${share(d.changes / 100)}</td>`;
+    }).join('');
+    return `<tr data-store="${esc(m.store)}"${m === market ? ' class="model"' : ''}><td class="l">${esc(marketName(m.store))}</td>${cells}
+      <td>${share((top2[0].changes + (top2[1]?.changes ?? 0)) / 100)} <small class="muted">(${top2.map((d) => d.label).join(' + ')})</small></td></tr>`;
+  });
+  $('#st-dow-table').innerHTML = `<thead><tr><th class="l">${t('st_cols')[0]}</th>${t('weekdays').map((d) => `<th>${d}</th>`).join('')}<th>${t('st_dow_top2')}</th></tr></thead><tbody>${dowRows.join('')}</tbody>`;
+}
+
+function renderStoreCharts() {
+  if (!markets) return;
+  stDomChart?.destroy();
+  stDowChart?.destroy();
+  const title = `${marketName(market.store)}: `;
+  stDomChart = rateChart($('#chart-st-dom'), market.by_day_of_month.map((d) => ({ label: d.key, rate: rate(d), target: isTarget(d.key) })), title + t('td_chart'));
+  stDowChart = weekdayChart($('#chart-st-dow'), weekdayShares(market), title + t('st_chart_dow'));
+}
+
+function selectMarket(name) {
+  market = markets.find((m) => m.store === name) || market;
+  store.set('market', market.store);
+  renderStores();
+  renderStoreCharts();
+}
+
+$('#store-select').addEventListener('change', (e) => selectMarket(e.target.value));
+['#st-table', '#st-dow-table'].forEach((id) => $(id).addEventListener('click', (e) => {
+  const tr = e.target.closest('tr[data-store]');
+  if (tr) selectMarket(tr.dataset.store);
+}));
 
 function renderResultsTable() {
   const head = ['col_block', 'col_period', 'col_model', 'col_rows', 'col_mae', 'col_mape', 'col_rmse', 'col_r2', 'col_r2p', 'col_da', 'col_sys']
@@ -625,6 +749,7 @@ function renderCharts() {
   chartDefaults();
   renderMetricCharts();
   renderDomChart();
+  renderStoreCharts();
   renderProduct();
 }
 
@@ -634,6 +759,7 @@ function renderAll() {
   renderTiles();
   renderResultsTable();
   renderTargetDays();
+  renderStores();
   renderCatFilter();
   renderList();
   $('#generated').textContent = t('generated')(summary.generated, summary.data_end);
@@ -643,7 +769,10 @@ function renderAll() {
 async function boot() {
   renderStatic();
   const get = (url) => fetch(url).then((r) => { if (!r.ok) throw new Error(`${url}: ${r.status}`); return r.json(); });
-  const [s, pr] = await Promise.all([get('data/summary.json'), get('data/products.json')]);
+  // stores.json is optional: without it the supermarket section is hidden
+  const [s, pr, st] = await Promise.all([get('data/summary.json'), get('data/products.json'), get('data/stores.json').catch(() => null)]);
+  markets = st?.stores ?? null;
+  market = markets && (markets.find((m) => m.store === store.get('market')) || markets.find((m) => m.store !== 'Gurmar') || markets[0]);
   summary = s;
   dates = pr.dates;
   products = pr.products;

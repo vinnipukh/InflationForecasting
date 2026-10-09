@@ -82,6 +82,25 @@
     <p data-i18n="td_why"></p>
   </section>
 
+  <section id="stores">
+    <h2 data-i18n="st_h">Diğer marketlerde de bu günler mi?</h2>
+    <p data-i18n="st_p"></p>
+    <div class="explorer-controls">
+      <label for="store-select" data-i18n="st_pick">Market</label>
+      <select id="store-select"></select>
+    </div>
+    <p class="muted" id="st-meta" role="status"></p>
+    <div class="metrics" id="st-tiles"></div>
+    <div class="card td-chart"><div class="chart-box short"><canvas id="chart-st-dom" role="img"></canvas></div></div>
+    <div class="card td-chart"><div class="chart-box short"><canvas id="chart-st-dow" role="img"></canvas></div></div>
+    <p class="note" data-i18n="st_dow_note"></p>
+    <h3 class="td-sub" data-i18n="st_dow_table_h">Haftanın günlerine göre değişimlerin dağılımı</h3>
+    <div class="table-scroll"><table id="st-dow-table"></table></div>
+    <h3 class="td-sub" data-i18n="st_table_h">Tüm marketler</h3>
+    <div class="table-scroll"><table id="st-table"></table></div>
+    <p class="note" data-i18n="st_note"></p>
+  </section>
+
   <section id="method">
     <h2 data-i18n="method_h">Nasıl çalışıyor?</h2>
     <div class="cols" id="method-cols"></div>

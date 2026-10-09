@@ -130,3 +130,5 @@ tr.model td { font-weight: 600; }
   .product-list { max-height: 240px; }
   .chart-box { height: 280px; }
 }
+#st-table tr[data-store] { cursor: pointer; }
+#st-table tr[data-store]:hover td { background: var(--surface-2); }

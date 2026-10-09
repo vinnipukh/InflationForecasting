@@ -4,9 +4,10 @@ parameters in configs/phase1_best_params.json (no re-tuning) and writes
 * site/data/summary.json  — data-target-day metrics (model vs. yesterday's price) and system MAE per block, and
   regular-price change counts per day (target days vs. other days)
 * site/data/products.json — per product: regular price as change points, target-day forecasts
+* site/data/stores.json   — the same change counts for every upstream market (store_calendars)
 
-Needs data/processed from notebooks 01 and 02.
-Usage: python -m src.site_export
+Needs data/processed from notebooks 01 and 02, and all_stores_changes.parquet from src.target_days.stores.
+Usage: python -m src.site_export            (--stores: only stores.json, no retraining)
 """
 from __future__ import annotations
 
@@ -77,6 +78,50 @@ def change_calendar(feat: pd.DataFrame) -> dict:
     }
 
 
+def store_calendars(changes: pd.DataFrame, min_days: int = 30) -> list:
+    """The same change counts for every upstream market, under the pilot's rule (1/14/15/16 + holidays).
+
+    ``changes`` = data/processed/all_stores_changes.parquet (src.target_days.stores): product identity is the folded
+    name in every store, Gürmar included, so Gürmar differs slightly from change_calendar() (product IDs).
+    Stores with fewer than ``min_days`` comparable days are left out.
+    """
+    from src.target_days.calendar import fixed_rule
+
+    rule = fixed_rule("pilot_1_14_15_16_hol")
+    days = changes.groupby(["store", "date"]).agg(changes=("changed", "sum"), products=("changed", "size"),
+                                                  err=("err", "sum")).reset_index()
+    out = []
+    for store, d in days.groupby("store"):
+        if len(d) < min_days:
+            continue
+        idx = pd.DatetimeIndex(d["date"])
+        d = d.assign(target=rule(idx), dom=idx.day, dow=idx.dayofweek)
+        totals = d.groupby("target").agg(days=("changes", "size"), changes=("changes", "sum"), err=("err", "sum"))
+        by = lambda key, n: [{"key": int(k), "changes": int(r.changes), "products": int(r.products), "days": int(r.days)}
+                             for k, r in d.groupby(key).agg(changes=("changes", "sum"), products=("products", "sum"),
+                                                            days=("changes", "size")).reindex(range(*n)).dropna().iterrows()]
+        out.append({
+            "store": store, "days": len(d), "first": d["date"].min().date().isoformat(),
+            "last": d["date"].max().date().isoformat(), "products_median": int(d["products"].median()),
+            "by_day_of_month": by("dom", (1, 32)), "by_weekday": by("dow", (0, 7)),
+            **{key: {"days": int(totals.at[flag, "days"]) if flag in totals.index else 0,
+                     "changes": int(totals.at[flag, "changes"]) if flag in totals.index else 0,
+                     "persistence_abs_err_try": round(float(totals.at[flag, "err"]), 2) if flag in totals.index else 0.0}
+               for key, flag in (("target", True), ("other", False))},
+        })
+    return out
+
+
+def export_stores() -> None:
+    changes = pd.read_parquet(Path("data/processed/all_stores_changes.parquet"))
+    stores = store_calendars(changes)
+    OUT.mkdir(parents=True, exist_ok=True)
+    (OUT / "stores.json").write_text(json.dumps({
+        "generated": date.today().isoformat(), "data_end": changes["date"].max().date().isoformat(), "stores": stores,
+    }, ensure_ascii=False, indent=1), encoding="utf-8")
+    log.info("stores.json: %d stores", len(stores))
+
+
 def main() -> None:
     processed = Path("data/processed")
     feat = pd.read_parquet(processed / "gurmar_features.parquet")
@@ -139,8 +184,11 @@ def main() -> None:
         {"dates": [d.date().isoformat() for d in dates], "products": products},
         ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
     log.info("%d products, %d target-day forecasts", len(products), len(preds))
+    export_stores()
 
 
 if __name__ == "__main__":
+    import sys
+
     logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)s %(name)s: %(message)s")
-    main()
+    export_stores() if "--stores" in sys.argv else main()
